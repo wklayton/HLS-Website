@@ -162,6 +162,10 @@ header {
     display: block;
 }
 
+#offset {
+    visibility: hidden;
+}
+
 .welcome h1 {
     font-size: 3rem;
     color: var(--white);

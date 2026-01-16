@@ -1,8 +1,8 @@
 const navbar = document.getElementById('navigation');
-var welcomeOffset = document.getElementById('welcome').offsetHeight;
+var navOffset = document.getElementById('offset').offsetTop;
 
 function stickyNavbar() {
-    if (window.pageYOffset >= welcomeOffset) {
+    if (window.pageYOffset >= navOffset) {
         navbar.classList.add("sticky");
     } else {
         navbar.removeAttribute("class");
@@ -11,9 +11,10 @@ function stickyNavbar() {
 
 window.onscroll = function() {
     stickyNavbar();
+    
 };
 window.onresize = function() {
-    welcomeOffset = navbar.offsetTop;
+    navOffset = document.getElementById('offset').offsetTop;
 };
 
 async function loadLatestAlbums() {
