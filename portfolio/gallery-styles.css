@@ -196,15 +196,44 @@ header {
 
 /* NAVIGATION STYLES */
 
+/* Fallback for old browsers */
 #navigation {
+    position: sticky;
+    top: 0;
     background-color: var(--black);
     border: 1px solid var(--black);
     width: 100%;
     padding: 0.5rem 0;
     z-index: 100;
     box-shadow: 0 0.15rem 1rem 0.05rem var(--black);
-    position: absolute;
- }
+}
+
+@keyframes toggle-sticky {
+  to { --is-sticky: 1; }
+}
+
+/* New browser support */
+@supports (animation-timeline: scroll()) {
+    #navigation {
+        position: absolute;
+        top: unset;
+    }
+    .nav-wrapper {
+        container-type: normal;
+        animation: toggle-sticky linear both;
+        animation-timeline: scroll(root);
+        animation-range: 0px calc(var(--scroll-threshold) * 2);
+        --is-sticky: 0;
+    }
+
+    @container style(--is-sticky: 1) {
+        #navigation {
+            position: fixed;
+            top: 0;    
+        }
+    }
+}
+
 
 .nav-bar {
     display: grid;
@@ -212,26 +241,7 @@ header {
     margin: 0 10vw;
 }
 
-/* TOGGLE STICKY NAV */
 
-@keyframes toggle-sticky {
-  to { --is-sticky: 1; }
-}
-
-.nav-wrapper {
-    container-type: normal;
-    animation: toggle-sticky linear both;
-    animation-timeline: scroll(root);
-    animation-range: 0px calc(var(--scroll-threshold) * 2);
-    --is-sticky: 0;
-}
-
-@container style(--is-sticky: 1) {
-  #navigation {
-    position: fixed;
-    top: 0;    
-  }
-}
 
     /* SVG STYLES */
 
