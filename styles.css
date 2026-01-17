@@ -89,6 +89,7 @@
     --pink:#a58181;
     --red:#4c2a2c;
     --fonts:'Times New Roman', Times, serif;
+    --scroll-threshold: 18rem;
     font-family: var(--fonts);
     font-size: 11px;
 }
@@ -159,7 +160,7 @@ header {
 }
 
 .welcome {
-    height: 18rem;
+    height: var(--scroll-threshold);
     background: url('images/sampleWelcomeIMG.jpg') center no-repeat;
     background-size: cover;
     background-position-y: 38%;
@@ -192,6 +193,45 @@ header {
     padding: 0.5rem 0;
     z-index: 100;
     box-shadow: 0 0.15rem 1rem 0.05rem var(--black);
+    position: absolute;
+ }
+
+.nav-bar {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: 0 10vw;
+}
+
+/* TOGGLE STICKY NAV */
+
+@keyframes toggle-sticky {
+  to { --is-sticky: 1; }
+}
+
+.nav-wrapper {
+    container-type: normal;
+    animation: toggle-sticky linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0px calc(var(--scroll-threshold) * 2);
+    --is-sticky: 0;
+}
+
+@container style(--is-sticky: 1) {
+  #navigation {
+    position: fixed;
+    top: 0;    
+  }
+}
+
+/* NAVIGATION STYLES
+
+#navigation {
+    background-color: var(--black);
+    border: 1px solid var(--black);
+    width: 100%;
+    padding: 0.5rem 0;
+    z-index: 100;
+    box-shadow: 0 0.15rem 1rem 0.05rem var(--black);
 }
 
 .nav-bar {
@@ -202,14 +242,14 @@ header {
 
     /* TOGGLE STICKY NAV */
 
-    #navigation:not(.sticky) {
+    /* #navigation:not(.sticky) {
         position: absolute;
     }
 
     #navigation.sticky {
         position: fixed;
         top: 0;
-    }
+    } */
 
     /* SVG STYLES */
 
@@ -375,7 +415,7 @@ ul.nav-menu {
     width: 100%;
 }
 
-.album-card {
+.gallery-card {
     height: 40rem;
     width: clamp(12rem, 100%, 30rem);
     border-radius: 0.1rem;
@@ -388,17 +428,17 @@ ul.nav-menu {
     transition: border-color 0.2s ease-in-out;
 }
 
-.album-card:hover {
+.gallery-card:hover {
     border-color: var(--pink);
 }
 
-.album-directory {
+.gallery-directory {
     width: 100%;
     height: 100%;
     display: flex;
 }
 
-.album-image {
+.gallery-image {
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
@@ -410,7 +450,7 @@ ul.nav-menu {
     z-index: -1;
 }
 
-.album-content {
+.gallery-content {
     background-color: var(--white-t);
     backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur(2px);
@@ -422,15 +462,15 @@ ul.nav-menu {
     transition: border-color 0.2s ease-in-out;
 }
 
-.album-card:hover .album-content {
+.gallery-card:hover .gallery-content {
     border-color: var(--pink);
 }
 
-.album-title {
+.gallery-title {
     font-size: 2.5rem;
 }
 
-.album-description {
+.gallery-description {
     font-size: 1.75rem;
 }
 
@@ -439,28 +479,28 @@ ul.nav-menu {
         flex-direction: row;
         gap: 2rem;
     }
-    .album-card {
+    .gallery-card {
         height: 25rem;
         width: clamp(8rem, 100%, 18rem);
         border: 0.4rem solid var(--gold);
     }
-    .album-content {
+    .gallery-content {
         min-height: 5.5rem;
         border-top: 0.3rem solid var(--gold);
         transition: min-height 0.2s ease-in-out, border-color 0.2s ease-in-out;
 
     }
 
-    .album-card:hover .album-content {
+    .gallery-card:hover .gallery-content {
         min-height: 6rem;
         border-color: var(--pink);
     }
 
-    .album-title {
+    .gallery-title {
         font-size: 1.25rem;
     }
 
-    .album-description {
+    .gallery-description {
         font-size: 0.9rem;
     }
 }

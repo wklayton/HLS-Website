@@ -1,0 +1,329 @@
+/* ----CSS RESET---- */
+
+    /* 1. Use a more-intuitive box-sizing model */
+    *, *::before, *::after {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    }
+
+    /* 2. Remove default margin */
+
+    * {
+    margin: 0;
+    }
+    body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+    }
+
+    /* 3. Improve media defaults */
+    
+    img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+    }
+
+    /* 4. Inherit fonts for form controls */
+
+    input, button, textarea, select {
+    font: inherit;
+    }
+
+    /* 7. Avoid text overflows */
+
+    p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+    }
+
+    /* 8. Improve line wrapping */
+
+    p {
+    text-wrap: wrap;
+    }
+    h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+    }
+
+    /* 9. Reset buttons and anchors */
+
+    a, button {
+    color: inherit;
+    text-decoration: none;
+    border: none;
+    padding: 0;
+    display: inline-block;
+    box-sizing: content-box;
+    cursor: pointer;
+    }
+
+    /* 10. Reset unordered lists */
+
+    ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    }
+
+
+
+
+
+
+
+
+
+
+/* ----GENERAL HTML STYLES---- */
+
+:root {
+    --gold:#c4a369;
+    --white:#efeae1;
+    --white-t: rgb(239, 234, 225, 0.85);
+    --black:#1c1d1e;
+    --silver:#c4c4c5;
+    --grey:#909091;
+    --tan:#c9b49f;
+    --brown:#897466;
+    --pink:#a58181;
+    --red:#4c2a2c;
+    --fonts:'Times New Roman', Times, serif;
+    --scroll-threshold: 18rem;
+    font-family: var(--fonts);
+    font-size: 11px;
+}
+
+@media screen and (min-width: 430px) {
+    :root {
+        font-size: 13px;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    :root {
+        font-size: 17px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    :root {
+        font-size: 21px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    :root {
+        font-size: 24px;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    :root {
+        font-size: 28px;
+    }
+}
+
+::selection {
+    color: var(--white);
+    background-color: #c4a369ea;
+}
+
+*:focus-visible {
+    outline: 2px solid var(--gold);
+    border-radius: 0.1rem;
+}
+
+body {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+h2 {
+    color: var(--red);
+    font-size: 3rem;
+
+}
+
+h3 {
+    color: var(--black);
+}
+
+p {
+    color: var(--red);
+}
+
+/* ----HEADER STYLES---- */
+
+header {
+    background-color: var(--black);
+}
+
+.hero {
+    height: var(--scroll-threshold);
+    background: url('../images/sampleIMG.jpg') center no-repeat;
+    background-size: cover;
+    background-position-y: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 10;
+}
+
+#offset {
+    visibility: hidden;
+}
+
+.gallery-title {
+    font-size: 3rem;
+    font-family: var(--fonts);
+    color: var(--white);
+    width: fit-content;
+    margin: 0 auto;
+    position: relative;
+    filter: drop-shadow(0rem 0rem .3rem var(--black));
+}
+
+.gallery-description {
+    font-size: 1.2rem;
+    font-family: var(--fonts);
+    color: var(--white);
+    width: fit-content;
+    margin: 0 auto;
+    position: relative;
+    filter: drop-shadow(0rem 0rem .2rem var(--black));
+}
+
+/* NAVIGATION STYLES */
+
+#navigation {
+    background-color: var(--black);
+    border: 1px solid var(--black);
+    width: 100%;
+    padding: 0.5rem 0;
+    z-index: 100;
+    box-shadow: 0 0.15rem 1rem 0.05rem var(--black);
+    position: absolute;
+ }
+
+.nav-bar {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: 0 10vw;
+}
+
+/* TOGGLE STICKY NAV */
+
+@keyframes toggle-sticky {
+  to { --is-sticky: 1; }
+}
+
+.nav-wrapper {
+    container-type: normal;
+    animation: toggle-sticky linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0px calc(var(--scroll-threshold) * 2);
+    --is-sticky: 0;
+}
+
+@container style(--is-sticky: 1) {
+  #navigation {
+    position: fixed;
+    top: 0;    
+  }
+}
+
+    /* SVG STYLES */
+
+        /* LOGO DEFAULT STYLES */
+
+        .logo-mini {
+            width: 4rem;
+            height: auto;
+            display: block;
+        }
+
+        .logo-full {
+            width: 10rem;
+            height: auto;
+            display: none;
+            visibility: hidden;
+        }
+
+        .logos {
+            width: fit-content;
+        }
+
+        .lines, .text {
+            transition: fill 0.2s ease-in-out;
+        }
+
+        .logos:hover .lines, .logos:focus-within .lines {
+            fill: var(--white);
+        }
+
+        .logos:hover .text, .logos:focus-within .text {
+            fill: var(--gold);
+        }
+
+        /* @MEDIA */
+
+        @media only screen and (min-width:350px) {
+            .logo-mini {
+                display: none;
+                visibility: hidden;
+            }
+
+            .logo-full {
+                display: block;
+                visibility: visible;
+            }
+        }
+
+        @media only screen and (min-width:900px) {
+            .logo-full {
+                width: 14rem;
+            }
+        }
+
+/* NAVIGATION MENU */
+
+ul.nav-menu {
+    color: var(--gold);
+    width: fit-content;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin: 0 0 0 auto;
+}
+
+.nav-item {
+    padding: 0 0.25rem;
+    background-color: var(--black);
+    font-size: 0.8rem;
+    transition: color 0.2s ease-in-out;
+}
+
+    /* @MEDIA */
+
+    @media only screen and (min-width:350px) {
+        .nav-item {
+            font-size: 0.85rem;
+        }
+    }
+
+    @media only screen and (min-width:700px) {
+        .nav-item {
+            font-size: 1.2rem;
+        }
+    }
+
+    @media only screen and (min-width:900px) {
+        .nav-item {
+            font-size: 1.4rem;
+        }
+    }
+
+.nav-item:hover, .nav-item:focus-visible {
+    color: var(--white);
+}

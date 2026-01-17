@@ -1,59 +1,83 @@
-const navbar = document.getElementById('navigation');
-var navOffset = document.getElementById('offset').offsetTop;
+// const navbar = document.getElementById('navigation');
+// var navOffset = document.getElementById('offset').offsetTop;
 
-function stickyNavbar() {
-    if (window.pageYOffset >= navOffset) {
-        navbar.classList.add("sticky");
-    } else {
-        navbar.removeAttribute("class");
-    }
-};
+// function stickyNavbar() {
+//     if (window.pageYOffset >= navOffset) {
+//         navbar.classList.add("sticky");
+//     } else {
+//         navbar.removeAttribute("class");
+//     }
+// };
 
-window.onscroll = function() {
-    stickyNavbar();
-    
-};
-window.onresize = function() {
-    navOffset = document.getElementById('offset').offsetTop;
-};
+// window.onscroll = function() {
+//     stickyNavbar();
+// };
 
-
-
+// window.onresize = function() {
+//     navOffset = document.getElementById('offset').offsetTop;
+//     stickyNavbar();
+// };
 
 
-async function loadLatestAlbums() {
+
+
+
+
+// const navbar = document.getElementById('navigation');
+// const offsetElement = document.getElementById('offset');
+
+// // Use an IntersectionObserver to detect when the navbar should stick
+// const observer = new IntersectionObserver(([entry]) => {
+//     // If the offset element is no longer visible at the top, stick the nav
+//     navbar.classList.toggle("sticky", !entry.isIntersecting);
+// }, { 
+//     threshold: [1.0],
+//     rootMargin: "0px 0px 0px 0px" // Trigger as soon as it hits the top
+// });
+
+// observer.observe(offsetElement);
+
+// // Minimal resize handler to update logic if needed
+// window.addEventListener('resize', () => {
+//     // IntersectionObserver handles most logic automatically, 
+//     // but you can refresh state here if your layout changes drastically.
+// }, { passive: true });
+
+
+
+
+
+
+async function loadLatestGalleries() {
   try {
-    const response = await fetch('portfolio.json'); // Fetch your data source
-    const albums = await response.json();
+    const response = await fetch('portfolio/gallery.json');
+    const gallery = await response.json();
 
-    console.log(albums);
+    console.log(gallery);
     
     const container = document.getElementById('portfolio-wrapper');
     container.innerHTML = ''; // Clear existing content
 
-    // Take only the 3 most recent posts
-    albums.portfolios.slice(0, 3).forEach(album => {
+    gallery.portfolios.slice(0, 3).forEach(gallery => {
       const card = `
-        <div class="album-card">
-            <a class="album-directory" href="portfolio/${album.directory}.html">
-                <img class="album-image" src="images/${album.image}" alt="${album.title} ${album.type}">
-                <div class="album-content">
-                    <h3 class="album-title">${album.title}</h3>
-                    <p class="album-description">${album.description}</p>
+        <div class="gallery-card">
+            <a class="gallery-directory" href="portfolio/gallery.php?album=${gallery.directory}#">
+                <img class="gallery-image" src="images/${gallery.image}" alt="${gallery.title} ${gallery.type}">
+                <div class="gallery-content">
+                    <h3 class="gallery-title">${gallery.title}</h3>
+                    <p class="gallery-description">${gallery.description}</p>
                 </div>
             </a>
         </div>
       `;
-      container.insertAdjacentHTML('beforeend', card); // Efficiently adds new HTML
+      container.insertAdjacentHTML('beforeend', card);
     });
   } catch (error) {
     console.error('Error loading posts:', error);
   }
 }
 
-// Run when the page loads
-document.addEventListener('DOMContentLoaded', loadLatestAlbums);
-
+document.addEventListener('DOMContentLoaded', loadLatestGalleries);
 
 
 
