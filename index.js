@@ -47,7 +47,7 @@ window.addEventListener('resize', () => {
 
 
 
-async function loadLatestGalleries() {
+async function loadLatestPortfolio() {
   try {
     const response = await fetch('portfolio/gallery.json');
     const gallery = await response.json();
@@ -76,7 +76,7 @@ async function loadLatestGalleries() {
   }
 }
 
-document.addEventListener('DOMContentLoaded', loadLatestGalleries);
+document.addEventListener('DOMContentLoaded', loadLatestPortfolio);
 
 
 
