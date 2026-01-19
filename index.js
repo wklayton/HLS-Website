@@ -23,25 +23,24 @@
 
 
 
-// const navbar = document.getElementById('navigation');
-// const offsetElement = document.getElementById('offset');
+const navbar = document.getElementById('navigation');
+const offsetElement = document.getElementById('offset');
 
-// // Use an IntersectionObserver to detect when the navbar should stick
-// const observer = new IntersectionObserver(([entry]) => {
-//     // If the offset element is no longer visible at the top, stick the nav
-//     navbar.classList.toggle("sticky", !entry.isIntersecting);
-// }, { 
-//     threshold: [1.0],
-//     rootMargin: "0px 0px 0px 0px" // Trigger as soon as it hits the top
-// });
+// Use an IntersectionObserver to detect when the navbar should stick
+const observer = new IntersectionObserver(([entry]) => {
+    navbar.classList.toggle("sticky", !entry.isIntersecting);
+}, {
+    threshold: [1.0],
+    rootMargin: "-1px 0px 0px 0px" // Trigger as soon as it hits the top
+});
 
-// observer.observe(offsetElement);
+observer.observe(offsetElement);
 
-// // Minimal resize handler to update logic if needed
-// window.addEventListener('resize', () => {
-//     // IntersectionObserver handles most logic automatically, 
-//     // but you can refresh state here if your layout changes drastically.
-// }, { passive: true });
+// Minimal resize handler to update logic if needed
+window.addEventListener('resize', () => {
+    // IntersectionObserver handles most logic automatically, 
+    // but you can refresh state here if your layout changes drastically.
+}, { passive: true });
 
 
 

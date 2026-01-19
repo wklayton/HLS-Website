@@ -161,7 +161,7 @@ header {
 
 .welcome {
     height: var(--scroll-threshold);
-    background: url('images/sampleWelcomeIMG.jpg') center no-repeat;
+    background: url('images/sampleWelcomeIMG.webp') center no-repeat;
     background-size: cover;
     background-position-y: 38%;
     display: block;
@@ -187,7 +187,7 @@ header {
 /* NAVIGATION STYLES */
 
 /* Fallback for old browsers */
-#navigation {
+/* #navigation {
     position: sticky;
     top: 0;
     background-color: var(--black);
@@ -196,14 +196,14 @@ header {
     padding: 0.5rem 0;
     z-index: 100;
     box-shadow: 0 0.15rem 1rem 0.05rem var(--black);
-}
+} */
 
-@keyframes toggle-sticky {
+/* @keyframes toggle-sticky {
   to { --is-sticky: 1; }
-}
+} */
 
 /* New browser support */
-@supports (animation-timeline: scroll()) {
+/* @supports (animation-timeline: scroll()) {
     #navigation {
         position: absolute;
         top: unset;
@@ -222,16 +222,16 @@ header {
             top: 0;    
         }
     }
-}
+} */
 
 
-.nav-bar {
+/* .nav-bar {
     display: grid;
     grid-template-columns: auto auto;
     margin: 0 10vw;
-}
+} */
 
-/* NAVIGATION STYLES
+/* NAVIGATION STYLES  */
 
 #navigation {
     background-color: var(--black);
@@ -250,14 +250,14 @@ header {
 
     /* TOGGLE STICKY NAV */
 
-    /* #navigation:not(.sticky) {
+    #navigation:not(.sticky) {
         position: absolute;
     }
 
     #navigation.sticky {
         position: fixed;
         top: 0;
-    } */
+    }
 
     /* SVG STYLES */
 
