@@ -29,11 +29,11 @@ async function loadFullPortfolio() {
     fullGallery.portfolios.forEach(gallery => {
       const card = `
         <div class="gallery-card">
-            <a class="gallery-directory" href="portfolio/gallery.php?album=${gallery.directory}#">
-                <img class="gallery-image" src="images/${gallery.image}" alt="${gallery.title} ${gallery.type}">
-                <div class="gallery-content">
-                    <h3 class="gallery-title">${gallery.title}</h3>
-                    <p class="gallery-description">${gallery.description}</p>
+            <a class="portfolio-gallery-directory" href="portfolio/gallery.php?album=${gallery.directory}#">
+                <img class="portfolio-gallery-image" src="images/${gallery.image}" alt="${gallery.title} ${gallery.type}">
+                <div class="portfolio-gallery-content">
+                    <h3 class="portfolio-gallery-title">${gallery.title}</h3>
+                    <p class="portfolio-gallery-description">${gallery.description}</p>
                 </div>
             </a>
         </div>
