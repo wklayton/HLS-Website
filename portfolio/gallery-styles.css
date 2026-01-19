@@ -161,7 +161,7 @@ header {
 
 .hero {
     height: var(--scroll-threshold);
-    background: url('../images/sampleIMG.jpg') center no-repeat;
+    background: url('../images/sampleIMG.webp') center no-repeat;
     background-size: cover;
     background-position-y: 45%;
     display: flex;
@@ -196,10 +196,9 @@ header {
 
 /* NAVIGATION STYLES */
 
-/* Fallback for old browsers */
+/* NAVIGATION STYLES  */
+
 #navigation {
-    position: sticky;
-    top: 0;
     background-color: var(--black);
     border: 1px solid var(--black);
     width: 100%;
@@ -208,38 +207,22 @@ header {
     box-shadow: 0 0.15rem 1rem 0.05rem var(--black);
 }
 
-@keyframes toggle-sticky {
-  to { --is-sticky: 1; }
-}
-
-/* New browser support */
-@supports (animation-timeline: scroll()) {
-    #navigation {
-        position: absolute;
-        top: unset;
-    }
-    .nav-wrapper {
-        container-type: normal;
-        animation: toggle-sticky linear both;
-        animation-timeline: scroll(root);
-        animation-range: 0px calc(var(--scroll-threshold) * 2);
-        --is-sticky: 0;
-    }
-
-    @container style(--is-sticky: 1) {
-        #navigation {
-            position: fixed;
-            top: 0;    
-        }
-    }
-}
-
-
 .nav-bar {
     display: grid;
     grid-template-columns: auto auto;
     margin: 0 10vw;
 }
+
+    /* TOGGLE STICKY NAV */
+
+    #navigation:not(.sticky) {
+        position: absolute;
+    }
+
+    #navigation.sticky {
+        position: fixed;
+        top: 0;
+    }
 
 
 

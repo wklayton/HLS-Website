@@ -3,21 +3,21 @@
         {
             "title": "Kess and Vinny",
             "type": "wedding",
-            "image": "sampleWelcomeIMG.jpg",
+            "image": "sampleWelcomeIMG.webp",
             "description": "Kesseli and Vinny's wedding",
             "directory": "kessvinny"
         },
         {
             "title": "Sienna and Adam",
             "type": "family",
-            "image": "sampleIMG.jpeg",
+            "image": "sampleIMG.webp",
             "description": "Family pictures with Sienna and Adam",
             "directory": "siennaadam"
         },
         {
             "title": "Wesley and Hailey",
             "type": "portrait",
-            "image": "sampleIMG.jpg",
+            "image": "sampleIMG.webp",
             "description": "Wesley and Hailey's portraits",
             "directory": "wesleyhailey"
         }
