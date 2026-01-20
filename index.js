@@ -59,15 +59,12 @@ async function loadLatestPortfolio() {
 
     gallery.portfolios.slice(0, 3).forEach(gallery => {
       const card = `
-        <div class="gallery-card">
-            <a class="gallery-directory" href="portfolio/gallery.php?album=${gallery.directory}#">
-                <img class="gallery-image" src="images/${gallery.image}" alt="${gallery.title} ${gallery.type}">
-                <div class="gallery-content">
-                    <h3 class="gallery-title">${gallery.title}</h3>
-                    <p class="gallery-description">${gallery.description}</p>
-                </div>
-            </a>
-        </div>
+        <a class="portfolio-card" href="portfolio/portfolio.php?album=${gallery.directory}#">
+            <img class="portfolio-image" src="images/${gallery.image}" alt="${gallery.description}">
+            <div class="portfolio-content">
+                <h3 class="portfolio-title">${gallery.title}</h3>
+            </div>
+        </a>
       `;
       container.insertAdjacentHTML('beforeend', card);
     });
