@@ -39,6 +39,8 @@
 
                 --margins: max(0.5rem, 10vw);
                 --borders: clamp(0.3em, 2vw, 0.65em);
+
+                --rotation: 0deg;
             }
             :root:has(#theme-picker:checked) {
                 color-scheme: light;
@@ -114,7 +116,7 @@
                         <label for="theme-picker">
                             <div class="theme-checkbox-wrapper">
                                 <input type="checkbox" name="theme-picker" id="theme-picker" aria-label="Toggle light/dark theme" checked>
-                                <svg viewBox="0 0 50 50">
+                                <svg class="checked-light-svg" viewBox="0 0 50 50">
                                     <path class="checked-light" d="M25,.36C11.39.36.36,11.39.36,25s11.03,24.64,24.64,24.64,24.64-11.03,24.64-24.64S38.61.36,25,.36ZM5.36,25C5.36,14.17,14.17,5.36,25,5.36v39.28c-10.83,0-19.64-8.81-19.64-19.64Z"/>
                                 </svg>
                             </div>

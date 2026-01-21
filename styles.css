@@ -196,11 +196,11 @@ header {
 
         @media (hover: hover) {
             .logos:hover .lines, .logos:focus-within .lines {
-                fill: light-dark(var(--black), var(--white));
+                fill: light-dark(var(--white), var(--white));
             }
 
             .logos:hover .text, .logos:focus-within .text {
-                fill: light-dark(var(--white), var(--white));
+                fill: light-dark(var(--accent), var(--white));
             }
         }
 
@@ -228,16 +228,20 @@ ul.nav-menu {
 
 .theme-checkbox-wrapper {
     position: relative;
-    width: clamp(0.45em, 2vw, 1.5em);
-    height: clamp(0.45em, 2vw, 1.5em);
+    width: calc(clamp(0.55em, 3vw, 1.5em) + 2vw);
+    height: calc(clamp(0.55em, 3vw, 1.5em) + 2vw);
+    cursor: pointer;
 }
 
 .theme-checkbox-wrapper input {
-    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     opacity: 0;
     z-index: -1;
-    width: clamp(0.45em, 2vw, 1.5em);
-    height: clamp(0.45em, 2vw, 1.5em);
+    width: calc(clamp(0.55em, 3vw, 1.5em) + 2vw);
+    height: calc(clamp(0.55em, 3vw, 1.5em) + 2vw);
 }
 
 .theme-checkbox-wrapper svg{
@@ -245,17 +249,24 @@ ul.nav-menu {
     display: block;
     top: 50%;
     left: 50%;
-    width: clamp(0.45em, 2vw, 1.5em);
-    height: clamp(0.45em, 2vw, 1.5em);
+    width: clamp(0.55em, 3vw, 1.5em);
+    height: clamp(0.55em, 3vw, 1.5em);
     transform: translate(-50%, -50%);
-    cursor: pointer;
+}
+
+.checked-light {
+    position: relative;
+    transform-origin: center;
+    transition: fill 0.2s ease-in-out, transform 0.4s ease;
 }
 
 .theme-checkbox-wrapper input:checked ~ svg .checked-light{
     fill: var(--gold);
+    transform: rotate(180deg);
 }
 .theme-checkbox-wrapper input:not(:checked) ~ svg .checked-light{
     fill: var(--black);
+    transform: rotate(360deg);
 }
 
 .nav-item {
@@ -268,7 +279,8 @@ ul.nav-menu {
 }
 
 .nav-item:focus-visible {
-    color: light-dark(var(--accent), var(--white));
+    fill: var(--white);
+    color: var(--white);
 }
 
 .nav-item::after {
@@ -285,19 +297,18 @@ ul.nav-menu {
 }
 
 .nav-item:focus-visible::after {
+    background-color: var(--white);
     max-width: 100%;
 }
 
 @media (hover: hover) {
-    .nav-item:hover {
+    .nav-item:hover, .theme-checkbox-wrapper:hover input:checked ~ svg .checked-light, .theme-checkbox-wrapper:hover input:not(:checked) ~ svg .checked-light {
+        fill: var(--white);
         color: var(--white);
     }
     .nav-item:hover::after {
         background-color: var(--white);
         max-width: 100%;
-    }
-    .theme-checkbox-wrapper:hover input:checked ~ svg .checked-light{
-        fill: var(--gold);
     }
 }
 
@@ -320,10 +331,12 @@ ul.nav-menu {
 
 .about-right {
     display: block;
+    flex: 1 1 50%;
 }
 
 .about-left {
     display: block;
+    flex: 1 1 50%;
 }
 
 .about-image {
