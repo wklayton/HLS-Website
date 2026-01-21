@@ -194,7 +194,7 @@ header {
             transition: fill 0.2s ease-in-out;
         }
 
-        @media (hover: hover) {
+        @media (hover: hover) and (pointer: fine) {
             .logos:hover .lines, .logos:focus-within .lines {
                 fill: light-dark(var(--white), var(--white));
             }
@@ -301,7 +301,7 @@ ul.nav-menu {
     max-width: 100%;
 }
 
-@media (hover: hover) {
+@media (hover: hover) and (pointer: fine) {
     .nav-item:hover, .theme-checkbox-wrapper:hover input:checked ~ svg .checked-light, .theme-checkbox-wrapper:hover input:not(:checked) ~ svg .checked-light {
         fill: var(--white);
         color: var(--white);
@@ -390,7 +390,7 @@ ul.nav-menu {
     border-color: var(--tertiary);
 }
 
-@media (hover: hover) {
+@media (hover: hover) and (pointer: fine) {
     .portfolio-card:hover {
         border-color: var(--tertiary);
     }
@@ -426,7 +426,7 @@ ul.nav-menu {
     padding-bottom: 1em;
 }
 
-@media (hover: hover) {
+@media (hover: hover) and (pointer: fine) {
     .portfolio-card:hover .portfolio-content {
         border-color: var(--tertiary);
         padding-bottom: 1em;
@@ -471,7 +471,7 @@ ul.nav-menu {
     color: var(--black);
 }
 
-@media (hover: hover){
+@media (hover: hover) and (pointer: fine) {
     .view-more:hover {
         background-color: var(--tertiary);
         color: var(--primary);
