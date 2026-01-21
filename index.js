@@ -43,9 +43,12 @@
 // }, { passive: true });
 
 
+const themePicker = document.getElementById('theme-picker');
+const prefersDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-
-
+if (prefersDarkMode) {
+    themePicker.checked = false
+}
 
 async function loadLatestPortfolio() {
   try {

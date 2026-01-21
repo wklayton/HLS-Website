@@ -91,8 +91,8 @@
 }
 
 body {
-    background-color: var(--base);
-    color: var(--text);
+    background-color: var(--primary);
+    color: var(--secondary);
 }
 
 h1, h2, h3, h4 {
@@ -101,43 +101,38 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-    color: var(--text);
+    color: var(--dk-lt);
     font-size: clamp(1.5rem, 8.5vw, 4.5rem);
     text-align: center;
 }
 
 h2 {
-    color: var(--sub);
+    color: var(--tertiary);
     font-size: clamp(2rem, 4vw, 3rem);
 
 }
 
 h3 {
-    color: var(--text);
+    color: var(--secondary);
     font-size: clamp(1.5rem, 3vw, 2.25rem);
 }
 
 p {
-    color: var(--text);
+    color: var(--secondary);
     font-size: clamp(1rem, 2vw, 1.5rem);
-}
-
-/* COLOR THEMES */
-
-html {
-    color-scheme: dark light;
 }
 
 /* ----HEADER STYLES---- */
 
 header {
-    background-color: var(--text);
+    background-color: var(--secondary);
 }
 
 .welcome {
     height: clamp(18rem, 30vw, 36rem);
-    background: url('images/sampleIMG.webp') center no-repeat;
+    background-image: conic-gradient(light-dark(var(--white-t), var(--black-t)) 0 0), url("images/sampleIMG.webp");
     background-size: cover;
+    background-position: center;
     display: flex;
     align-items: end;
     justify-content: center;
@@ -160,11 +155,11 @@ header {
 }
 
 #navigation {
-    background-color: light-dark(var(--text), var(--accent));
-    border: 1px solid light-dark(var(--text), var(--accent));
+    background-color: light-dark(var(--secondary), var(--accent));
+    border: 1px solid light-dark(var(--secondary), var(--accent));
     width: 100%;
     padding: clamp(0.5rem, 2vw, 1.2rem) 0;
-    box-shadow: 0 0 8px 4px var(--black-t);
+    box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.6);
     font-size: 16px;
 }
 
@@ -201,11 +196,11 @@ header {
 
         @media (hover: hover) {
             .logos:hover .lines, .logos:focus-within .lines {
-                fill: light-dark(var(--base), var(--text));
+                fill: light-dark(var(--black), var(--white));
             }
 
             .logos:hover .text, .logos:focus-within .text {
-                fill: light-dark(var(--base), var(--base));
+                fill: light-dark(var(--white), var(--white));
             }
         }
 
@@ -231,20 +226,78 @@ ul.nav-menu {
     margin: 0 0 0 auto;
 }
 
+.theme-checkbox-wrapper {
+    position: relative;
+    width: clamp(0.45em, 2vw, 1.5em);
+    height: clamp(0.45em, 2vw, 1.5em);
+}
+
+.theme-checkbox-wrapper input {
+    position: relative;
+    opacity: 0;
+    z-index: -1;
+    width: clamp(0.45em, 2vw, 1.5em);
+    height: clamp(0.45em, 2vw, 1.5em);
+}
+
+.theme-checkbox-wrapper svg{
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    width: clamp(0.45em, 2vw, 1.5em);
+    height: clamp(0.45em, 2vw, 1.5em);
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.theme-checkbox-wrapper input:checked ~ svg .checked-light{
+    fill: var(--gold);
+}
+.theme-checkbox-wrapper input:not(:checked) ~ svg .checked-light{
+    fill: var(--black);
+}
+
 .nav-item {
-    padding: 0 clamp(0.1em, 0.5vw, 0.75em);
+    position: relative;
+    padding: 0 calc(clamp(0.1em, 0.5vw, 0.75em) + 0.1rem);
     background-color: transparent;
     font-size: clamp(0.6em, 3vw, 2em);
-    transition: color 0.2s ease-in-out;
+    border-radius: 0.1rem;
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 
 .nav-item:focus-visible {
-    color: var(--base);
+    color: light-dark(var(--accent), var(--white));
+}
+
+.nav-item::after {
+    content: '';
+    width: 100%;
+    max-width: 0;
+    position: absolute;
+    left: 0;
+    bottom: -0.1rem;
+    padding-top: clamp(0.2rem, 1vw, 0.4rem);
+    border-radius: 0.1rem;
+    background-color: light-dark(var(--accent), var(--white));
+    transition: max-width 0.2s ease-in-out;
+}
+
+.nav-item:focus-visible::after {
+    max-width: 100%;
 }
 
 @media (hover: hover) {
     .nav-item:hover {
-        color: light-dark(var(--accent), var(--text));
+        color: var(--white);
+    }
+    .nav-item:hover::after {
+        background-color: var(--white);
+        max-width: 100%;
+    }
+    .theme-checkbox-wrapper:hover input:checked ~ svg .checked-light{
+        fill: var(--gold);
     }
 }
 
@@ -309,7 +362,7 @@ ul.nav-menu {
     height: clamp(23em, 30vw, 40em);
     width: 100%;
     display: flex;
-    background-color: var(--base);
+    background-color: var(--primary);
     position: relative;
     overflow: hidden;
     text-decoration: none;
@@ -321,12 +374,12 @@ ul.nav-menu {
 }
 
 .portfolio-card:focus {
-    border-color: var(--sub);
+    border-color: var(--tertiary);
 }
 
 @media (hover: hover) {
     .portfolio-card:hover {
-        border-color: var(--sub);
+        border-color: var(--tertiary);
     }
 }
 
@@ -344,7 +397,7 @@ ul.nav-menu {
 }
 
 .portfolio-content {
-    background-color: var(--white-t);
+    background-color: light-dark(var(--white-t), var(--black-t));
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     margin-top: auto;
@@ -356,19 +409,19 @@ ul.nav-menu {
 }
 
 .portfolio-card:focus .portfolio-content {
-    border-color: var(--sub);
+    border-color: var(--tertiary);
     padding-bottom: 1em;
 }
 
 @media (hover: hover) {
     .portfolio-card:hover .portfolio-content {
-        border-color: var(--sub);
+        border-color: var(--tertiary);
         padding-bottom: 1em;
     }
 }
 
 .portfolio-title {
-    color: var(--black);
+    color: var(--dk-lt);
     opacity: 0.85;
     font-size: clamp(1.3em, 4vw, 2em);
     padding: 0.75em;
@@ -401,14 +454,14 @@ ul.nav-menu {
 }
 
 .view-more:focus-visible {
-    background-color: var(--sub);
+    background-color: var(--tertiary);
     color: var(--black);
 }
 
 @media (hover: hover){
     .view-more:hover {
-        background-color: var(--sub);
-        color: var(--base);
+        background-color: var(--tertiary);
+        color: var(--primary);
     }
 }
 
