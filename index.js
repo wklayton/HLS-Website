@@ -59,7 +59,7 @@ async function loadLatestPortfolio() {
 
     gallery.portfolios.slice(0, 3).forEach(gallery => {
       const card = `
-        <a class="portfolio-card" href="portfolio/portfolio.php?album=${gallery.directory}#">
+        <a class="portfolio-card" href="portfolio/gallery.php?album=${gallery.directory}#">
             <img class="portfolio-image" src="images/${gallery.image}" alt="${gallery.description}">
             <div class="portfolio-content">
                 <h3 class="portfolio-title">${gallery.title}</h3>
