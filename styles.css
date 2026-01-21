@@ -208,15 +208,15 @@ header {
             transition: fill 0.2s ease-in-out;
         }
 
-        .logos:hover .lines, .logos:focus-within .lines {
-            fill: var(--white);
-        }
+        @media (hover: hover) {
+            .logos:hover .lines, .logos:focus-within .lines {
+                fill: var(--white);
+            }
 
-        .logos:hover .text, .logos:focus-within .text {
-            fill: var(--gold);
+            .logos:hover .text, .logos:focus-within .text {
+                fill: var(--gold);
+            }
         }
-
-        /* @MEDIA */
 
         @media only screen and (min-width:360px) {
             .logo-mini {
@@ -248,8 +248,14 @@ ul.nav-menu {
     transition: color 0.2s ease-in-out;
 }
 
-.nav-item:hover, .nav-item:focus-visible {
+.nav-item:focus-visible {
     color: var(--white);
+}
+
+@media (hover: hover) {
+    .nav-item:hover {
+        color: var(--white);
+    }
 }
 
 /* ---- MAIN ---- */
@@ -324,8 +330,14 @@ ul.nav-menu {
     transition: border-color 0.2s ease-in-out;
 }
 
-.portfolio-card:hover, .portfolio-card:focus {
+.portfolio-card:focus {
     border-color: var(--pink);
+}
+
+@media (hover: hover) {
+    .portfolio-card:hover {
+        border-color: var(--pink);
+    }
 }
 
 .portfolio-image {
@@ -352,9 +364,16 @@ ul.nav-menu {
     transition: border-color 0.2s ease-in-out, padding-bottom 0.2s ease-in-out;
 }
 
-.portfolio-card:hover .portfolio-content, .portfolio-card:focus .portfolio-content {
+.portfolio-card:focus .portfolio-content {
     border-color: var(--pink);
     padding-bottom: 1em;
+}
+
+@media (hover: hover) {
+    .portfolio-card:hover .portfolio-content {
+        border-color: var(--pink);
+        padding-bottom: 1em;
+    }
 }
 
 .portfolio-title {
@@ -389,9 +408,16 @@ ul.nav-menu {
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
-.view-more:hover {
+.view-more:focus-visible {
     background-color: var(--pink);
     color: var(--black);
+}
+
+@media (hover: hover){
+    .view-more:hover {
+        background-color: var(--pink);
+        color: var(--black);
+    }
 }
 
 

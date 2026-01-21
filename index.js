@@ -51,22 +51,42 @@ async function loadLatestPortfolio() {
   try {
     const response = await fetch('portfolio/gallery.json');
     const gallery = await response.json();
-
-    console.log(gallery);
     
     const container = document.getElementById('portfolio-wrapper');
     container.innerHTML = ''; // Clear existing content
+    
+    var i = 1;
 
     gallery.portfolios.slice(0, 3).forEach(gallery => {
-      const card = `
-        <a class="portfolio-card" href="portfolio/gallery.php?album=${gallery.directory}#">
-            <img class="portfolio-image" src="images/${gallery.image}" alt="${gallery.description}">
-            <div class="portfolio-content">
-                <h3 class="portfolio-title">${gallery.title}</h3>
-            </div>
-        </a>
-      `;
-      container.insertAdjacentHTML('beforeend', card);
+        const card = `
+            <a class="portfolio-card" href="portfolio/gallery.php?album=${gallery.directory}#">
+                <img id="portfolio-image-${i}" class="portfolio-image" src="images/${gallery.image}" alt="${gallery.description}">
+                <div class="portfolio-content">
+                    <h3 class="portfolio-title">${gallery.title}</h3>
+                </div>
+            </a>
+        `;
+        container.insertAdjacentHTML('beforeend', card);
+        var displayedImage = document.getElementById("portfolio-image-" + i);
+        var imageWidth = undefined;
+        var imageHeight = undefined;
+
+        if (displayedImage.complete) {
+            imageWidth = displayedImage.naturalWidth;
+            imageHeight = displayedImage.naturalHeight;
+            displayedImage.setAttribute("width", imageWidth);
+            displayedImage.setAttribute("height", imageHeight);
+        } else {
+            displayedImage.addEventListener('load', () => {
+                imageWidth = displayedImage.naturalWidth;
+                imageHeight = displayedImage.naturalHeight;
+                displayedImage.setAttribute("width", imageWidth);
+                displayedImage.setAttribute("height", imageHeight);
+            });
+        }
+
+        i++
+
     });
   } catch (error) {
     console.error('Error loading posts:', error);
