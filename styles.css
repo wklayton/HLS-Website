@@ -164,6 +164,7 @@ header {
 .nav-wrapper {
     position: -webkit-sticky;
     position: sticky;
+    z-index: 1000;
     top: 0;
 }
 
@@ -172,7 +173,6 @@ header {
     border: 1px solid var(--black);
     width: 100%;
     padding: clamp(0.5rem, 2vw, 1.2rem) 0;
-    z-index: 1000;
     box-shadow: 0 0 8px 4px var(--black-t);
     font-size: 16px;
 }
