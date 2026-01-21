@@ -13,47 +13,53 @@
     </head>
     <body>
         <style>
-            /* LOGO DEFAULT STYLES */
-            .lines {
-                fill:#c4a369;
+            :root {
+                --gold:rgb(196, 163, 105);
+                --gold-t:rgba(196, 163, 105, 0.85);
+                --white:rgb(241, 238, 232);
+                --white-t: rgba(245, 242, 236, 0.6);
+                --black:rgb(28, 29, 30);
+                --black-t:rgba(15, 16, 17, 0.7);
+                --pink:rgb(207, 136, 136);
+                --red:rgb(76, 42, 44);
+                --fonts:'Times New Roman', Times, serif;
+                font-family: var(--fonts);
+
+                --base: var(--white);
+                --text: var(--black);
+                --accent: var(--gold);
+                --sub: var(--red);
+
+                --margins: max(0.5rem, 10vw);
+                --borders: clamp(0.3em, 2vw, 0.65em);
             }
-            .text {
-                fill:#efeae1;
+
+            @media (prefers-color-scheme: dark) {
+                :root {
+                    --base: var(--black);
+                    --text: var(--white);
+                    --sub: var(--pink);
+                }
+            }
+
+            @media (prefers-color-scheme: light) {
+                :root {
+                    --base: var(--white);
+                    --text: var(--black);
+                    --sub: var(--red);
+                }
             }
             /* NAV DEFAULT STYLES */
+            .lines {
+                fill: light-dark(var(--accent), var(--base));
+            }
+            .text {
+                fill: light-dark(var(--base), var(--text));
+            }
+
             .nav-item {
-                color: #c4a369;
-            }
-
-            /* Mobile Default */
-            #portfolio-gallery-list h2 {
-                display: block;
-                width: fit-content;
-                margin: 0 auto;
-            }
-            .portfolio-galleries-wrapper {
-                display: grid;
-                grid-template-columns: 1fr;
-                gap: 1rem;
-                padding: 1rem;
-                margin: 0 auto;
-                justify-items: center;
-            }
-
-            /* 2 Columns */
-            @media (min-width: 600px) {
-                .portfolio-galleries-wrapper {
-                    grid-template-columns: repeat(2, 1fr);
+                    color: light-dark(var(--accent), var(--base));
                 }
-            }
-
-            /* 3 Columns */
-            @media (min-width: 1600px) {
-                .portfolio-galleries-wrapper {
-                    margin-top: 6rem;
-                    grid-template-columns: repeat(3, 1fr);
-                }
-            }
         </style>
         <header>
             <section id="welcome" class="welcome">
