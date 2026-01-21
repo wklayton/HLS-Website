@@ -1,23 +1,3 @@
-const navbar = document.getElementById('navigation');
-const offsetElement = document.getElementById('offset');
-
-const observer = new IntersectionObserver(([entry]) => {
-    navbar.classList.toggle("sticky", !entry.isIntersecting);
-}, {
-    threshold: [1.0],
-    rootMargin: "-1px 0px 0px 0px"
-});
-
-observer.observe(offsetElement);
-
-window.addEventListener('resize', () => {
-}, { passive: true });
-
-
-
-
-
-
 async function loadFullPortfolio() {
   try {
     const response = await fetch('portfolio/gallery.json');

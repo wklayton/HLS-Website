@@ -9,9 +9,18 @@
         <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
         <link rel="preload" href="images/sampleIMG.webp" as="image" fetchpriority="high">
         <link rel="preload" href="styles.css" as="style">
+        <link rel="preload" href="index.css" as="style">
         <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
+        <link rel="stylesheet" href="index.css">
+
+        <!-- Get Theme Preference -->
+        <script>
+            const theme = localStorage.getItem('saved-theme') || 
+                        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        </script>
+        
+        <!-- Default Styles -->
         <style>
             :root {
                 --gold:rgb(196, 163, 105);
@@ -20,9 +29,8 @@
                 --white-t: rgba(241, 239, 234, 0.6);
                 --black:rgb(28, 28, 28);
                 --black-t:rgba(28, 28, 28, 0.6);
-                --pink:#cea0a0;
-                --red:rgb(76, 42, 44);
-                --gray:#bebebe;
+                --red:rgb(105, 41, 44);
+                --gray:rgb(190, 190, 190);
 
                 --fonts:'Times New Roman', Times, serif;
                 font-family: var(--fonts);
@@ -42,11 +50,11 @@
 
                 --rotation: 0deg;
             }
-            :root:has(#theme-picker:checked) {
-                color-scheme: light;
-            }
-            :root:not(:has(#theme-picker:checked)) {
+            [data-theme='dark'] {
                 color-scheme: dark;
+            }
+            [data-theme='light'] {
+                color-scheme: light;
             }
 
             /* NAV DEFAULT STYLES */
@@ -61,8 +69,10 @@
                     color: light-dark(var(--accent), var(--black));
                 }
         </style>
+    </head>
+    <body>
         <header>
-            <section id="welcome" class="welcome">
+            <section class="hero">
                 <h1>Hailey Layton Studios</h1>
             </section>
         </header>
@@ -113,14 +123,16 @@
                     <ul class="nav-menu">
                         <li><a class="nav-item" href="portfolio.html">Portfolio</a></li>
                         <li><a class="nav-item" href="#">Contact Us</a></li>
-                        <label for="theme-picker">
-                            <div class="theme-checkbox-wrapper">
-                                <input type="checkbox" name="theme-picker" id="theme-picker" aria-label="Toggle light/dark theme" checked>
-                                <svg class="checked-light-svg" viewBox="0 0 50 50">
-                                    <path class="checked-light" d="M25,.36C11.39.36.36,11.39.36,25s11.03,24.64,24.64,24.64,24.64-11.03,24.64-24.64S38.61.36,25,.36ZM5.36,25C5.36,14.17,14.17,5.36,25,5.36v39.28c-10.83,0-19.64-8.81-19.64-19.64Z"/>
-                                </svg>
-                            </div>
-                        </label>
+                        <li>
+                            <label for="theme-picker">
+                                <span class="theme-checkbox-wrapper">
+                                    <input type="checkbox" name="theme-picker" id="theme-picker" aria-label="Toggle light/dark theme" checked>
+                                    <svg class="checked-light-svg" viewBox="0 0 50 50">
+                                        <path class="checked-light" d="M25,.36C11.39.36.36,11.39.36,25s11.03,24.64,24.64,24.64,24.64-11.03,24.64-24.64S38.61.36,25,.36ZM5.36,25C5.36,14.17,14.17,5.36,25,5.36v39.28c-10.83,0-19.64-8.81-19.64-19.64Z"/>
+                                    </svg>
+                                </span>
+                            </label>
+                        </li>
                     </ul>
                 </div>
             </nav>
@@ -144,7 +156,7 @@
                         <!-- PLACEHOLDER -->
                         <div class="portfolio-card">
                             <a class="portfolio-directory" href="portfolio.html">
-                                <img class="portfolio-image" src="" alt="portfolio-description">
+                                <img class="portfolio-image" src="#" alt="portfolio-description" width="0" height="0">
                                 <div class="portfolio-content">
                                     <h3 class="portfolio-title">portfolio 1</h3>
                                 </div>
@@ -153,7 +165,7 @@
                         <!-- PLACEHOLDER -->
                         <div class="portfolio-card">
                             <a class="portfolio-directory" href="portfolio.html">
-                                <img class="portfolio-image" src="" alt="portfolio-description">
+                                <img class="portfolio-image" src="#" alt="portfolio-description" width="0" height="0">
                                 <div class="portfolio-content">
                                     <h3 class="portfolio-title">portfolio 2</h3>
                                 </div>
@@ -162,36 +174,34 @@
                         <!-- PLACEHOLDER -->
                         <div class="portfolio-card">
                             <a class="portfolio-directory" href="portfolio.html">
-                                <img class="portfolio-image" src="" alt="portfolio-description">
+                                <img class="portfolio-image" src="#" alt="portfolio-description" width="0" height="0">
                                 <div class="portfolio-content">
                                     <h3 class="portfolio-title">portfolio 3</h3>
                                 </div>
                             </a>
                         </div>
                     </div>
-                    <a class="view-more" aria-label="See more of our portfolio" href="portfolio.html">View More</a>
+                    <a class="view-more custom-btn" aria-label="See more of our portfolio" href="portfolio.html">View More</a>
                 </div>
-            </section>
-            <section id="contact">
-                <h2>Contact Us</h2>
-                <p>Phone</p>
-                <p>Email</p>
             </section>
         </main>
         <footer>
-            <div class="contact-form-wrapper">
-                <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
-                    <div class="required-input">
-                        <input type="text" name="name" placeholder="name" required>
-                        <input type="email" name="email" placeholder="email" required>
-                    </div>
-                    <textarea name="message" placeholder="message" required></textarea>
-                    <button type="submit">Submit</button>
-                </form>
-            </div>
+            <section id="contact">
+                <h2>Get in Touch</h2>
+                <a class="contact-link" href="mailto:info@haileylayton.com">info@haileylayton.com</a>
+                <div class="contact-form-wrapper">
+                    <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                        <input type="text" name="name" placeholder="name*" required>
+                        <input type="email" name="email" placeholder="email*" required>
+                        <textarea name="message" placeholder="message" required></textarea>
+                        <button type="submit" class="form-submit custom-btn">Submit</button>
+                    </form>
+                </div>
+            </section>
             <p class="copyright">Copyright &copy; Hailey Layton Studios 2026</p>
         </footer>
-        <script defer src="index.js"></script>
+        <script src="index.js"></script>
+        <script defer src="main.js"></script>
     </body>
 </html>
 
