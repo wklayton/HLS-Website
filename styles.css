@@ -11,6 +11,7 @@
     * {
     margin: 0;
     }
+
     body {
     /* 3. Add accessible line-height */
     line-height: 1.5;
@@ -160,6 +161,12 @@ header {
 
 /* NAVIGATION STYLES  */
 
+.nav-wrapper {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
 #navigation {
     background-color: var(--black);
     border: 1px solid var(--black);
@@ -175,17 +182,6 @@ header {
     grid-template-columns: auto auto;
     margin: 0 var(--margins);
 }
-
-    /* TOGGLE STICKY NAV */
-
-    #navigation:not(.sticky) {
-        position: absolute;
-    }
-
-    #navigation.sticky {
-        position: fixed;
-        top: 0;
-    }
 
     /* SVG STYLES */
 
@@ -259,7 +255,7 @@ ul.nav-menu {
 /* ---- MAIN ---- */
 
 .top-section {
-    margin-top: clamp(3rem, 15vw, 10rem);
+    margin-top: clamp(2rem, 8vw, 6rem);
 }
 
 /* ABOUT SECTION */
