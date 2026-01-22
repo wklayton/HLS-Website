@@ -1,50 +1,3 @@
-// const navbar = document.getElementById('navigation');
-// var navOffset = document.getElementById('offset').offsetTop;
-
-// function stickyNavbar() {
-//     if (window.pageYOffset >= navOffset) {
-//         navbar.classList.add("sticky");
-//     } else {
-//         navbar.removeAttribute("class");
-//     }
-// };
-
-// window.onscroll = function() {
-//     stickyNavbar();
-// };
-
-// window.onresize = function() {
-//     navOffset = document.getElementById('offset').offsetTop;
-//     stickyNavbar();
-// };
-
-
-
-
-
-
-// const navbar = document.getElementById('navigation');
-// const offsetElement = document.getElementById('offset');
-
-// // Use an IntersectionObserver to detect when the navbar should stick
-// const observer = new IntersectionObserver(([entry]) => {
-//     navbar.classList.toggle("sticky", !entry.isIntersecting);
-// }, {
-//     threshold: [1.0],
-//     rootMargin: "-1px 0px 0px 0px" // Trigger as soon as it hits the top
-// });
-
-// observer.observe(offsetElement);
-
-// // Minimal resize handler to update logic if needed
-// window.addEventListener('resize', () => {
-//     // IntersectionObserver handles most logic automatically, 
-//     // but you can refresh state here if your layout changes drastically.
-// }, { passive: true });
-
-
-
-
 async function loadLatestPortfolio() {
   try {
     const response = await fetch('portfolio/gallery.json');
@@ -56,9 +9,15 @@ async function loadLatestPortfolio() {
     var i = 1;
 
     gallery.portfolios.slice(0, 3).forEach(gallery => {
+        const imageBase = gallery.image.replace('sm-', '');
         const card = `
             <a class="portfolio-card" href="portfolio/gallery.php?album=${gallery.directory}#">
-                <img id="portfolio-image-${i}" class="portfolio-image" src="images/${gallery.image}" alt="${gallery.description}">
+                <img id="portfolio-image-${i}" class="portfolio-image" src="portfolio/galleries/${gallery.directory}/${gallery.image}" alt="${gallery.description}"
+                srcset="portfolio/galleries/${gallery.directory}/sm-${imageBase} 500w,
+                        portfolio/galleries/${gallery.directory}/md-${imageBase} 1000w,
+                        portfolio/galleries/${gallery.directory}/lg-${imageBase} 1500w,
+                        portfolio/galleries/${gallery.directory}/xl-${imageBase} 2000w"
+                sizes="(min-width: 1024px) 33.3vw, 100vw">
                 <div class="portfolio-content">
                     <h3 class="portfolio-title">${gallery.title}</h3>
                 </div>

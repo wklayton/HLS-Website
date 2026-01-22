@@ -3,86 +3,37 @@
         {
             "title": "Kess and Vinny",
             "type": "wedding",
-            "image": "sampleWelcomeIMG.webp",
+            "image": "sm-kessvinny-1.webp",
             "description": "Kesseli and Vinny's wedding",
             "directory": "kessvinny"
         },
         {
             "title": "Sienna and Adam",
             "type": "family",
-            "image": "sampleIMG.webp",
+            "image": "sm-siennaadam-01.webp",
             "description": "Family pictures with Sienna and Adam",
             "directory": "siennaadam"
         },
         {
             "title": "Wesley and Hailey",
             "type": "portrait",
-            "image": "sampleIMG.webp",
+            "image": "sm-wesleyhailey-1.webp",
             "description": "Wesley and Hailey's portraits",
             "directory": "wesleyhailey"
         },
         {
             "title": "Christy and Adam",
             "type": "wedding",
-            "image": "sampleWelcomeIMG.webp",
-            "description": "Kesseli and Vinny's wedding",
+            "image": "#",
+            "description": "Christy and Adam's wedding",
             "directory": "christyadam"
         },
         {
-            "title": "Sienna and Adam",
-            "type": "family",
-            "image": "sampleIMG.webp",
-            "description": "Family pictures with Sienna and Adam",
-            "directory": "siennaadam"
-        },
-        {
-            "title": "Wesley and Hailey",
-            "type": "portrait",
-            "image": "sampleIMG.webp",
-            "description": "Wesley and Hailey's portraits",
-            "directory": "wesleyhailey"
-        },
-        {
-            "title": "Kess and Vinny",
-            "type": "wedding",
-            "image": "sampleWelcomeIMG.webp",
-            "description": "Kesseli and Vinny's wedding",
-            "directory": "kessvinny"
-        },
-        {
-            "title": "Sienna and Adam",
-            "type": "family",
-            "image": "sampleIMG.webp",
-            "description": "Family pictures with Sienna and Adam",
-            "directory": "siennaadam"
-        },
-        {
-            "title": "Wesley and Hailey",
-            "type": "portrait",
-            "image": "sampleIMG.webp",
-            "description": "Wesley and Hailey's portraits",
-            "directory": "wesleyhailey"
-        },
-        {
-            "title": "Kess and Vinny",
-            "type": "wedding",
-            "image": "sampleWelcomeIMG.webp",
-            "description": "Kesseli and Vinny's wedding",
-            "directory": "kessvinny"
-        },
-        {
-            "title": "Sienna and Adam",
-            "type": "family",
-            "image": "sampleIMG.webp",
-            "description": "Family pictures with Sienna and Adam",
-            "directory": "siennaadam"
-        },
-        {
-            "title": "Wesley and Hailey",
-            "type": "portrait",
-            "image": "sampleIMG.webp",
-            "description": "Wesley and Hailey's portraits",
-            "directory": "wesleyhailey"
+            "title": "Austin and Rosey",
+            "type": "friends",
+            "image": "#",
+            "description": "Buddies Austin and Rosey",
+            "directory": "austinrosey"
         }
     ]
 }

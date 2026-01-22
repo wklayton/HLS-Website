@@ -288,7 +288,7 @@ ul.nav-menu {
     padding-top: clamp(0.2rem, 1vw, 0.4rem);
     border-radius: 0.1rem;
     background-color: light-dark(var(--accent), var(--white));
-    transition: max-width 0.2s ease-in-out;
+    transition: max-width 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 
 .nav-item:focus-visible::after {
@@ -411,17 +411,16 @@ footer p::selection, footer a::selection {
 .form-submit {
     background-color: light-dark(var(--red), var(--red));
     color: var(--white);
+    transition: opacity 0.2s ease-in-out;
 }
 
 .form-submit:focus-visible {
-    background-color: light-dark(var(--black), var(--red));
-    color: var(--white);
+    opacity: 0.85;
 }
 
 @media (hover: hover) and (pointer: fine) {
     .form-submit:hover {
-        background-color: light-dark(var(--black), var(--red));
-        color: var(--white);
+        opacity: 0.85;
     }
 }
 

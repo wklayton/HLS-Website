@@ -10,6 +10,8 @@
         <link rel="preload" href="images/sampleIMG.webp" as="image" fetchpriority="high">
         <link rel="preload" href="styles.css" as="style">
         <link rel="preload" href="index.css" as="style">
+        <link rel="preload" href="main.js" as="script">
+        <link rel="preload" href="index.js" as="script">
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="index.css">
 
@@ -145,7 +147,15 @@
                         <p class="about-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni, aspernatur eaque, dolor ex omnis fugiat deserunt nulla excepturi quidem odio quisquam exercitationem distinctio sapiente asperiores repudiandae corporis, error optio reiciendis!</p>
                     </div>
                     <div class="about-left">
-                        <img src="images/sampleIMG.webp" alt="" class="about-image">
+                        <!-- PLACEHOLDER IMAGE AND SIZES -->
+                        <img class="about-image"
+                            src="images/sm-photovideoduo.webp"
+                            alt="Hailey and Wesley Layton Photographer and Videographer"
+                            srcset="images/sm-photovideoduo.webp 500w,
+                                    images/md-photovideoduo.webp 1000w,
+                                    images/lg-photovideoduo.webp 1500w,
+                                    images/xl-photovideoduo.webp 2000w"
+                            sizes="(min-width: 600px) 50vw, (min-width: 1024px) 33.3vw, 100vw">
                     </div>
                 </div>
             </section>

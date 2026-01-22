@@ -52,7 +52,7 @@
 }
 
 .portfolio-card {
-    height: clamp(23em, 30vw, 40em);
+    height: 100vw;
     width: 100%;
     display: flex;
     background-color: var(--primary);
@@ -77,19 +77,17 @@
 }
 
 .portfolio-image {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
     pointer-events: none;
-    position: absolute;
     object-fit: cover;
-    scale: 1.05;
+    object-position: center;
     width: 100%;
     height: 100%;
     z-index: -1;
 }
 
 .portfolio-content {
+    position: absolute;
+    bottom: 0;
     background-color: light-dark(var(--white-t), var(--black-t));
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
@@ -124,6 +122,9 @@
 @media screen and (min-width:1024px) {
     #portfolio-wrapper {
         flex-direction: row;
+    }
+    .portfolio-card {
+        height: clamp(23em, 30vw, 40em);
     }
     .portfolio-title {
         font-size: clamp(1.5em, 2vw, 2.5em);
