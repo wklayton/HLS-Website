@@ -25,32 +25,18 @@
         <!-- Default Styles -->
         <style>
             :root {
-                --gold:rgb(196, 163, 105);
-                --gold-t:rgba(196, 163, 105, 0.85);
-                --white:rgb(241, 238, 232);
-                --white-t: rgba(241, 239, 234, 0.6);
-                --black:rgb(28, 28, 28);
-                --black-t:rgba(28, 28, 28, 0.6);
-                --red:rgb(105, 41, 44);
-                --gray:rgb(190, 190, 190);
-
-                --fonts:'Times New Roman', Times, serif;
-                font-family: var(--fonts);
+                --gold:oklch(77% 24% 76);
+                --white:oklch(97% 2% 85);
+                --black:oklch(20% 2% 270);
+                --red:oklch(37% 22% 16);
+                --pink: oklch(44% 27% 19);
+                --silver:oklch(84% 2% 120);
+                --gray:oklch(60% 2% 230);
 
                 color-scheme: dark light;
 
-                --lt-dk: light-dark(var(--white), var(--black));
-                --dk-lt: light-dark(var(--black), var(--white));
-
-                --primary: light-dark(var(--white), var(--black));
-                --secondary: light-dark(var(--black), var(--gray));
-                --tertiary: light-dark(var(--red), var(--white));
-                --accent: var(--gold);
-
-                --margins: max(0.5rem, 10vw);
-                --borders: clamp(0.3em, 2vw, 0.65em);
-
-                --rotation: 0deg;
+                --fonts:'Times New Roman', Times, serif;
+                font-family: var(--fonts);
             }
             [data-theme='dark'] {
                 color-scheme: dark;
@@ -61,15 +47,15 @@
 
             /* NAV DEFAULT STYLES */
             .lines {
-                fill: light-dark(var(--accent), var(--black));
+                fill: light-dark(var(--gold), var(--gold));
             }
             .text {
-                fill: var(--lt-dk);
+                fill: light-dark(var(--white), var(--white));
             }
 
             .nav-item {
-                    color: light-dark(var(--accent), var(--black));
-                }
+                color: light-dark(var(--gold), var(--gold));
+            }
         </style>
     </head>
     <body>
@@ -143,7 +129,8 @@
             <section id="about" class="top-section">
                 <div class="about-wrapper">
                     <div class="about-right">
-                        <h2 class="about-title">Arizona Wedding Photographer and Videographer Duo</h2>
+                        <h2 class="about-title">A Little About Us</h2>
+                        <h3 class="about-subtitle">Arizona Photographer and Videographer Duo</h3>
                         <p class="about-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni, aspernatur eaque, dolor ex omnis fugiat deserunt nulla excepturi quidem odio quisquam exercitationem distinctio sapiente asperiores repudiandae corporis, error optio reiciendis!</p>
                     </div>
                     <div class="about-left">

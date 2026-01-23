@@ -17,7 +17,7 @@ async function loadLatestPortfolio() {
                         portfolio/galleries/${gallery.directory}/md-${imageBase} 1000w,
                         portfolio/galleries/${gallery.directory}/lg-${imageBase} 1500w,
                         portfolio/galleries/${gallery.directory}/xl-${imageBase} 2000w"
-                sizes="(min-width: 1024px) 33.3vw, 100vw">
+                sizes="(min-width: 1024px) 25vw, 100vw">
                 <div class="portfolio-content">
                     <h3 class="portfolio-title">${gallery.title}</h3>
                 </div>
