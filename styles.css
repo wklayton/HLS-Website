@@ -105,7 +105,7 @@
     --light-gray:oklch(75% 2% 225);
 
     --gold-t:oklch(76% 24% 79 / 0.8);
-    --white-t:oklch(97% 2% 85 / 0.4);
+    --white-t:oklch(97% 2% 85 / 0.2);
     --black-t:oklch(20% 2% 270 / 0.5);
     --red-t:oklch(35% 22% 16 / 0.8);
     --pink-t: oklch(70% 20% 16 / 0.8);
@@ -115,7 +115,9 @@
     --white-t2:oklch(97% 2% 85 / 0.4);
     --black-t2:oklch(20% 2% 270 / 0.8);
     --silver-t2:oklch(84% 2% 120 / 0.2);
+    
     --dark-gray-t:oklch(45% 2% 235 / 0.4);
+    --light-black-t:oklch(25% 2% 267 / 0.3);
 
     --margins: max(0.5rem, 10vw);
     --borders: clamp(0.3em, 2vw, 0.65em);
@@ -194,7 +196,7 @@ header {
 
 .hero {
     height: clamp(18rem, 30vw, 36rem);
-    background-image: conic-gradient(light-dark(var(--dark-gray-t), var(--black-t)), light-dark(var(--dark-gray-t), var(--black-t))), url("images/sampleIMG.webp");
+    background-image: conic-gradient(light-dark(var(--light-black-t), var(--black-t)), light-dark(var(--light-black-t), var(--black-t))), url("images/sampleIMG.webp");
     background-size: cover;
     background-position: center;
     display: flex;

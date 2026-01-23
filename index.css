@@ -97,19 +97,19 @@
     height: 20vw;
     position: absolute;
     bottom: 0;
-    background-color: light-dark(var(--white-t), var(--black-t));
+    background-color: light-dark(var(--light-black-t), var(--black-t));
     backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur(2px);
     margin-top: auto;
     width: 100%;
-    box-shadow: 0px 0px 8px 2px light-dark(var(--black-t), var(--dark-black));
+    box-shadow: 0px 0px 8px 2px light-dark(var(--light-black), var(--dark-black));
     border-top: 1px solid light-dark(var(--silver-t), var(--silver-t));
     padding-bottom: 0;
     transition: padding-bottom 0.3s ease;
 }
 
 .portfolio-title {
-    color: var(--lt-dk);
+    color: light-dark(var(--white), var(--light-silver));
     font-size: 6vw;
     padding: 0.75em;
     margin: 0 auto;
