@@ -25,7 +25,7 @@
         <!-- Default Styles -->
         <style>
             :root {
-                --gold:oklch(77% 24% 76);
+                --gold:oklch(74% 21% 76);
                 --white:oklch(97% 2% 85);
                 --black:oklch(20% 2% 270);
                 --red:oklch(37% 22% 16);
@@ -159,11 +159,13 @@
             </nav>
         </div>
         <main>
-            <section>
-                <h2>Book us</h2>
-                <h3>What are you waiting for?!</h3>
-                <p></p>
-                <a href="#contact">Get in contact with us to book!</a>
+            <section id="book-us">
+                <div class="book-us-wrapper">
+                    <h2>Book us</h2>
+                    <h3>What are you waiting for?!</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus natus maiores id quae, libero iure suscipit fugiat optio explicabo voluptatem asperiores autem nemo minus aut quidem quas laboriosam consequatur voluptates atque molestiae consectetur similique nesciunt deserunt? Ipsa perspiciatis voluptatibus dolorem, praesentium accusamus obcaecati, ducimus rem cumque maiores odit quis mollitia!</p>
+                    <a href="#contact">Get in contact with us to book!</a>
+                </div>
             </section>
             <section id="portfolio">
                 <div class="portfolio-section">
@@ -200,6 +202,31 @@
                     <a class="view-more custom-btn" aria-label="See more of our portfolio" href="portfolio.html">View More</a>
                 </div>
             </section>
+            <section id="testimonials">
+                <div class="testimonials-wrapper">
+                    <h2>Client Testimonials</h2>
+                    <h3>Don't just take our word for it</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, voluptatem nesciunt voluptatibus quisquam ullam sequi rerum officiis adipisci eius dolores fugiat molestias quis aspernatur quos accusantium quo suscipit hic? Fugiat! Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium eligendi mollitia cum impedit quasi at commodi neque! Sunt quo nesciunt, at, aliquam provident quas illo soluta eum incidunt voluptate facilis?</p>
+                    <a href="#contact">Get in contact with us to book!</a>
+                </div>
+            </section>
+            <section id="pricing">
+                <div class="pricing-wrapper">
+                    <h2 class="pricing-title">Pricing and Packages</h2>
+                    <section class="package-card package-card-1">
+                        <h3 class="pricing-subtitle">Plan 1</h3>
+                        <p class="pricing-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni, aspernatur eaque, dolor ex omnis fugiat deserunt nulla excepturi quidem odio quisquam exercitationem distinctio sapiente asperiores repudiandae corporis, error optio reiciendis!</p>
+                    </section>
+                    <section class="package-card package-card-2">
+                        <h3 class="pricing-subtitle">Plan 2</h3>
+                        <p class="pricing-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni, aspernatur eaque, dolor ex omnis fugiat deserunt nulla excepturi quidem odio quisquam exercitationem distinctio sapiente asperiores repudiandae corporis, error optio reiciendis!</p>
+                    </section>
+                    <section class="package-card package-card-3">
+                        <h3 class="pricing-subtitle">Plan 3</h3>
+                        <p class="pricing-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni, aspernatur eaque, dolor ex omnis fugiat deserunt nulla excepturi quidem odio quisquam exercitationem distinctio sapiente asperiores repudiandae corporis, error optio reiciendis!</p>
+                    </section>
+                </div>
+            </section>
             <section id="about">
                 <div class="about-wrapper">
                     <div class="about-right">
@@ -216,28 +243,24 @@
                                     images/md-photovideoduo.webp 1000w,
                                     images/lg-photovideoduo.webp 1500w,
                                     images/xl-photovideoduo.webp 2000w"
-                            sizes="(min-width: 600px) 50vw, (min-width: 1024px) 33.3vw, 100vw">
+                            sizes="(min-width: 1024px) 33.3vw, 100vw">
                     </div>
                 </div>
-            </section>
-            <section>
-                <h2>Client Testimonials</h2>
-                <h3>Don't just take our word for it</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, voluptatem nesciunt voluptatibus quisquam ullam sequi rerum officiis adipisci eius dolores fugiat molestias quis aspernatur quos accusantium quo suscipit hic? Fugiat! Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium eligendi mollitia cum impedit quasi at commodi neque! Sunt quo nesciunt, at, aliquam provident quas illo soluta eum incidunt voluptate facilis?</p>
-                <a href="#contact">Get in contact with us to book!</a>
             </section>
         </main>
         <footer>
             <section id="contact">
-                <h2>Get in Touch</h2>
-                <a class="contact-link" href="mailto:info@haileylayton.com">info@haileylayton.com</a>
-                <div class="contact-form-wrapper">
-                    <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
-                        <input type="text" name="name" placeholder="name*" required>
-                        <input type="email" name="email" placeholder="email*" required>
-                        <textarea name="message" placeholder="message" required></textarea>
-                        <button type="submit" class="form-submit custom-btn">Submit</button>
-                    </form>
+                <div class="contact-wrapper">
+                    <h2>Get in Touch</h2>
+                    <a class="contact-link" href="mailto:info@haileylayton.com">info@haileylayton.com</a>
+                    <div class="contact-form-wrapper">
+                        <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                            <input type="text" name="name" placeholder="name*" required>
+                            <input type="email" name="email" placeholder="email*" required>
+                            <textarea name="message" placeholder="message" required></textarea>
+                            <button type="submit" class="form-submit custom-btn">Submit</button>
+                        </form>
+                    </div>
                 </div>
             </section>
             <p class="copyright">Copyright &copy; Hailey Layton Studios 2026</p>

@@ -1,10 +1,15 @@
-/* ABOUT SECTION */
-
-#about {
-    background-color: light-dark(var(--white-t), var(--gray-t));
-    box-shadow: 0 0 10px 10px light-dark(var(--black-t), var(--black));
+/* PRICING SECTION */
+#pricing {
+    background-color: light-dark(var(--dark-silver), var(--dark-gray));
+    box-shadow: 0 0 8px 5px light-dark(var(--black-t), var(--black));
     padding: 2rem 0;
 }
+
+#pricing h3 {
+    color: light-dark(var(--dark-gold), var(--light-gold));
+}
+
+/* ABOUT SECTION */
 
 .about-wrapper {
     display: flex;
@@ -33,17 +38,13 @@
     object-fit: cover;
 }
 
-@media screen and (min-width:1600px) {
+@media screen and (min-width:1024px) {
     .about-wrapper {
         flex-direction: row;
     }
 }
 
 /* PORTFOLIO SECTION */
-
-.portfolio-section {
-    margin: 0 var(--margins);
-}
 
 #portfolio h2 {
     margin: 0 auto;
@@ -56,6 +57,7 @@
     align-items: center;
     gap: clamp(16px, 3vw, 64px);
     font-size: 16px;
+    margin: 2rem 0;
 }
 
 .portfolio-card {
@@ -80,7 +82,7 @@
     width: 100%;
     height: 100%;
     z-index: -1;
-    transition: scale 0.2s ease;
+    transition: scale 0.25s ease;
 }
 
 .portfolio-card:focus .portfolio-image {
