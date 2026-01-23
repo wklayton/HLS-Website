@@ -91,7 +91,7 @@
     --dark-gold:oklch(70% 22% 77);
     --dark-white:oklch(95.5% 2% 90);
     --dark-black:oklch(14% 2% 273);
-    --dark-red:oklch(32% 20% 11);
+    --dark-red:oklch(32% 20% 14);
     --dark-pink: oklch(40% 25% 17);
     --dark-silver:oklch(78% 2% 125);
     --dark-gray:oklch(45% 2% 235);
@@ -99,7 +99,7 @@
     --light-gold:oklch(84% 26% 75);
     --light-white:oklch(98.5% 2% 80);
     --light-black:oklch(25% 2% 267);
-    --light-red:oklch(42% 24% 21);
+    --light-red:oklch(42% 24% 18);
     --light-pink: oklch(48% 29% 21);
     --light-silver:oklch(90% 2% 115);
     --light-gray:oklch(75% 2% 225);
@@ -109,8 +109,8 @@
     --black-t:oklch(20% 2% 270 / 0.5);
     --red-t:oklch(35% 22% 16 / 0.8);
     --pink-t: oklch(70% 20% 16 / 0.8);
-    --silver-t:oklch(84% 2% 120 / 0.8);
-    --gray-t:oklch(60% 2% 230 / 0.8);
+    --silver-t:oklch(84% 2% 120 / 0.2);
+    --gray-t:oklch(60% 2% 230 / 0.155);
 
     --margins: max(0.5rem, 10vw);
     --borders: clamp(0.3em, 2vw, 0.65em);
@@ -134,8 +134,9 @@
 }
 
 body {
-    background-color: light-dark(var(--dark-white), var(--dark-black));
+    background-color: light-dark(var(--light-silver), var(--light-black));
     color: light-dark(var(--black), var(--white));
+    transition: background-color 0.2s ease;
 }
 
 h1, h2, h3, h4 {
@@ -353,7 +354,7 @@ ul.nav-menu {
 /* ---- MAIN ---- */
 
 .top-section {
-    margin-top: clamp(2rem, 8vw, 6rem);
+    margin-top: clamp(4rem, 16vw, 8rem);
 }
 
 .custom-btn {
@@ -425,10 +426,11 @@ footer *::selection {
     flex-direction: column;
     width: 100%;
     gap: 0.5rem;
-    margin: 0 auto;
-    background-color: light-dark(var(--dark-white), var(--dark-black));
+    margin: 2rem auto 0;
+    background-color: light-dark(var(--light-silver), var(--light-black));
     padding: 1rem;
     border-radius: var(--border-radius);
+    box-shadow: inset 0 0 5px 2px light-dark(var(--black-t), var(--dark-black));
 }
 
 #contact-form input, #contact-form textarea {
@@ -442,11 +444,6 @@ footer *::selection {
 
 #contact-form input::placeholder, #contact-form textarea::placeholder {
     color: light-dark(var(--gray), var(--dark-silver));
-}
-.required-input {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
 }
 
 /* .form-submit default properties found in .custom-btn */
