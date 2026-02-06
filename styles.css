@@ -73,51 +73,47 @@
 
 
 :root {
-    /* Also found in html head */
-    --gold:oklch(76% 23% 78.5);
-    --white:oklch(97% 2% 85);
-    --black:oklch(20% 2% 270);
-    --red:oklch(37% 22% 16);
-    --pink: oklch(44% 27% 19);
-    --silver:oklch(86% 2% 120);
-    --gray:oklch(60% 2% 230);
+    /* In HTML Docs */
+    --gold: oklch(75.5% 23.5% 80);
+    --white: oklch(97.2% 2% 78);
+    --black: oklch(20% 1.5% 286);
+    --silver: oklch(87% 2% 73);
+    --gray: oklch(57% 1% 250);
+    --red:oklch(38% 23% 21.5);
+    --pink: oklch(51% 29% 21.5);
 
     color-scheme: dark light;
 
     --fonts:'Times New Roman', Times, serif;
     font-family: var(--fonts);
 
-    /* css variables */
-    --dark-gold:oklch(52% 18% 78.5);
-    --dark-white:oklch(95.5% 2% 90);
-    --dark-black:oklch(14% 2% 273);
-    --dark-red:oklch(32% 20% 14);
-    --dark-pink: oklch(40% 25% 17);
-    --dark-silver:oklch(83% 2% 125);
-    --dark-gray:oklch(40% 2% 235);
+    /* CSS Variables */
+    --dark-gold:oklch(59% 22.5% 80);
+    --dark-white:oklch(94% 2% 78);
+    --dark-black:oklch(10% 1.5% 286);
+    --dark-red:oklch(34% 20% 21.5);
+    --dark-pink: oklch(46% 27% 21.5);
+    --dark-silver: oklch(78% 2% 73);
+    --dark-gray: oklch(38% 0.5% 250);
 
-    --light-gold:oklch(82% 25% 78.5);
-    --light-white:oklch(98.5% 2% 80);
-    --light-black:oklch(25% 2% 267);
-    --light-red:oklch(42% 24% 18);
-    --light-pink: oklch(48% 29% 21);
-    --light-silver:oklch(90% 2% 115);
-    --light-gray:oklch(75% 2% 225);
+    --light-gold:oklch(80% 24% 80);
+    --light-white:oklch(98.5% 2% 78);
+    --light-black:oklch(27% 1.5% 286);
+    --light-red:oklch(45% 23% 21.5);
+    --light-pink: oklch(56% 29% 21.5);
+    --light-silver: oklch(92% 2% 73);
+    --light-gray: oklch(66% 1% 250);
 
-    --gold-t:oklch(76% 23% 78.5 / 0.8);
-    --white-t:oklch(97% 2% 85 / 0.2);
-    --black-t:oklch(20% 2% 270 / 0.5);
-    --red-t:oklch(35% 22% 16 / 0.8);
-    --pink-t: oklch(70% 20% 16 / 0.8);
-    --silver-t:oklch(84% 2% 120 / 0.2);
-    --gray-t:oklch(60% 2% 230 / 0.155);
+    --trans-gold: oklch(75.5% 23.5% 80 / 0.8);
+    --trans-white: oklch(97.2% 2% 78 / 0.5);
+    --trans-black: oklch(20% 1.5% 286 / 0.5);
+    --trans-light-black: oklch(27% 1.5% 286 / 0.5);
+    --trans-dark-black: oklch(10% 1.5% 286 / 0.5);
+    --trans-gray: oklch(57% 1% 250 / 0.3);
 
-    --white-t2:oklch(97% 2% 85 / 0.4);
-    --black-t2:oklch(20% 2% 270 / 0.8);
-    --silver-t2:oklch(84% 2% 120 / 0.2);
-    
-    --dark-gray-t:oklch(45% 2% 235 / 0.4);
-    --light-black-t:oklch(25% 2% 267 / 0.3);
+    --mild-shadow:var(--trans-light-black);
+    --shadow:var(--trans-black);
+    --deep-shadow:var(--trans-dark-black);
 
     --margins: max(0.5rem, 10vw);
     --borders: clamp(0.3em, 2vw, 0.65em);
@@ -132,7 +128,7 @@
 
 ::selection {
     color: var(--white);
-    background-color: var(--gold-t);
+    background-color: var(--trans-gold);
 }
 
 *:focus-visible {
@@ -141,7 +137,7 @@
 }
 
 body {
-    background-color: light-dark(var(--light-silver), var(--light-black));
+    background-color: light-dark(var(--dark-white), var(--light-black));
     color: light-dark(var(--black), var(--white));
     transition: background-color 0.2s ease;
 }
@@ -204,7 +200,7 @@ header {
 
 .hero {
     height: clamp(18rem, 30vw, 36rem);
-    background-image: conic-gradient(light-dark(var(--light-black-t), var(--black-t)), light-dark(var(--light-black-t), var(--black-t))), url("images/sampleIMG.webp");
+    background-image: conic-gradient(light-dark(var(--trans-light-black), var(--trans-black)), light-dark(var(--trans-light-black), var(--trans-black))), url("images/sampleIMG.webp");
     background-size: cover;
     background-position: center;
     display: flex;
@@ -447,7 +443,7 @@ footer {
     text-align: center;
     padding: 1rem 0;
     margin-top: 2rem;
-    box-shadow: 0 0 8px 5px light-dark(var(--black-t), var(--black));
+    box-shadow: 0 0 8px 5px light-dark(var(--shadow), var(--deep-shadow));
 }
 
 footer *::selection {
@@ -476,7 +472,7 @@ footer *::selection {
     background-color: light-dark(var(--light-silver), var(--light-black));
     padding: 1rem;
     border-radius: var(--border-radius);
-    box-shadow: inset 0 0 5px 2px light-dark(var(--black-t), var(--dark-black));
+    box-shadow: inset 0 0 5px 2px light-dark(var(--shadow), var(--deep-shadow));
 }
 
 #contact-form input, #contact-form textarea {
@@ -495,18 +491,18 @@ footer *::selection {
 /* .form-submit default properties found in .custom-btn */
 
 .form-submit {
-    background-color: light-dark(var(--light-red), var(--pink));
+    background-color: light-dark(var(--red), var(--pink));
     color: light-dark(var(--white), var(--white));
     transition: background-color 0.2s ease-in-out;
 }
 
 .form-submit:focus-visible {
-    background-color: light-dark(var(--red), var(--dark-pink));
+    background-color: light-dark(var(--dark-red), var(--dark-pink));
 }
 
 @media (hover: hover) and (pointer: fine) {
     .form-submit:hover {
-        background-color: light-dark(var(--red), var(--dark-pink));
+        background-color: light-dark(var(--dark-red), var(--dark-pink));
     }
 }
 
