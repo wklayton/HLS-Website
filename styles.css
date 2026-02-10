@@ -158,7 +158,7 @@ h1, h2, h3, h4 {
 /* Default h1 styles */
 
 h1 {
-    color: light-dark(var(--black), var(--white));
+    color: light-dark(var(--white), var(--white));
     font-size: clamp(1.5rem, 8.5vw, 4.5rem);
     text-align: center;
 }
@@ -192,6 +192,10 @@ p {
     font-size: clamp(1rem, 2vw, 1.5rem);
 }
 
+.to_caps {
+    text-transform: uppercase;
+}
+
 /* ----HEADER STYLES---- */
 
 header {
@@ -209,12 +213,33 @@ header {
     padding: 1rem 0;
 }
 
-.hero div {
+.hero .hero_content {
     width: clamp(17em, 60%, 50em);
     height: auto;
 }
 
-.hero div svg {
+.heading_combo {
+    position: relative;
+}
+
+.heading_combo h1 {
+    position: absolute;
+    width: fit-content;
+    white-space: nowrap;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 10vw;
+    letter-spacing: min(0.25vw, 5px);
+}
+
+@media screen and (min-width: 350px) {
+    .heading_combo h1 {
+        font-size: clamp(2.2rem, 7.5vw, 6.5rem);
+    }
+}
+
+.hero svg {
     filter: drop-shadow(0 0 5px light-dark(var(--black-t2), var(--light-black)));
 }
 
