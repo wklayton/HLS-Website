@@ -441,8 +441,6 @@ ul.nav-menu {
 footer {
     background-color: var(--gold);
     text-align: center;
-    padding: 1rem 0;
-    margin-top: 2rem;
     box-shadow: 0 0 8px 5px light-dark(var(--shadow), var(--deep-shadow));
 }
 
