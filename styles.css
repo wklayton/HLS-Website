@@ -141,6 +141,9 @@ body {
     background-color: light-dark(var(--dark-white), var(--light-black));
     color: light-dark(var(--black), var(--white));
     transition: background-color 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    min-height: 100svh;
 }
 
 main {
@@ -517,6 +520,7 @@ footer {
     background-color: var(--gold);
     text-align: center;
     box-shadow: 0 0 8px 5px light-dark(var(--mild-shadow), var(--shadow));
+    margin-top: auto;
 }
 
 footer *::selection {

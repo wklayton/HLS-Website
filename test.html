@@ -155,6 +155,21 @@
         --light-black-t:oklch(25% 2% 267 / 0.3);
     }
 </style>
+<head>
+    <meta charset="utf-8">
+        <title>Hailey Layton Studios</title>
+        <meta name="description" content="Need some pics. I gotchu!">
+        <meta name="author" content="Wesley Layton">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+        <link rel="preload" href="images/sampleWelcomeIMG.webp" as="image" fetchpriority="high">
+        <link rel="preload" href="styles.css" as="style">
+        <link rel="preload" href="index.css" as="style">
+        <link rel="preload" href="main.js" as="script">
+        <link rel="preload" href="index.js" as="script">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="index.css">
+</head>
 <body style="background-color: rgb(58, 58, 58);">
     <!-- <div style="display: flex;">
         <div style="background-color: var(--dark-white); width: 10rem; height: 10rem;"></div>
@@ -219,6 +234,10 @@
 
 
     <style>
+        .hls-wrapper {
+            max-width: 100vw;
+            overflow-x: scroll;
+        }
         .wrapper {
             display: flex;
             gap: 1rem;
@@ -643,4 +662,22 @@
         </div>
     </div>
     <br><br><br>
+
+    <footer>
+            <section id="contact">
+                <div class="contact-wrapper">
+                    <h2>Get in Touch</h2>
+                    <a class="contact-link" href="mailto:info@haileylayton.com">info@haileylayton.com</a>
+                    <div class="contact-form-wrapper">
+                        <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                            <input type="text" name="name" autocomplete="name" placeholder="name*" required>
+                            <input type="email" name="email" autocomplete="email" placeholder="email*" required>
+                            <textarea name="message" placeholder="message" required></textarea>
+                            <button type="submit" class="form-submit custom-btn">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <p class="copyright">Copyright &copy; Hailey Layton Studios 2026</p>
+        </footer>
 </body>
