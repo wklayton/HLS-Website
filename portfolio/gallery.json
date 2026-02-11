@@ -34,6 +34,279 @@
             "image": "#",
             "description": "Buddies Austin and Rosey",
             "directory": "austinrosey"
+        },
+        {
+            "title": "Kess and Vinny",
+            "type": "wedding",
+            "image": "sm-kessvinny-2.webp",
+            "description": "Kesseli and Vinny's wedding",
+            "directory": "kessvinny"
+        },
+        {
+            "title": "Sienna and Adam",
+            "type": "family",
+            "image": "sm-siennaadam-02.webp",
+            "description": "Family pictures with Sienna and Adam",
+            "directory": "siennaadam"
+        },
+        {
+            "title": "Wesley and Hailey",
+            "type": "portrait",
+            "image": "sm-wesleyhailey-2.webp",
+            "description": "Wesley and Hailey's portraits",
+            "directory": "wesleyhailey"
+        },
+        {
+            "title": "Christy and Adam",
+            "type": "wedding",
+            "image": "#",
+            "description": "Christy and Adam's wedding",
+            "directory": "christyadam"
+        },
+        {
+            "title": "Austin and Rosey",
+            "type": "friends",
+            "image": "#",
+            "description": "Buddies Austin and Rosey",
+            "directory": "austinrosey"
+        },
+        {
+            "title": "Kess and Vinny",
+            "type": "wedding",
+            "image": "sm-kessvinny-3.webp",
+            "description": "Kesseli and Vinny's wedding",
+            "directory": "kessvinny"
+        },
+        {
+            "title": "Sienna and Adam",
+            "type": "family",
+            "image": "sm-siennaadam-03.webp",
+            "description": "Family pictures with Sienna and Adam",
+            "directory": "siennaadam"
+        },
+        {
+            "title": "Wesley and Hailey",
+            "type": "portrait",
+            "image": "sm-wesleyhailey-3.webp",
+            "description": "Wesley and Hailey's portraits",
+            "directory": "wesleyhailey"
+        },
+        {
+            "title": "Christy and Adam",
+            "type": "wedding",
+            "image": "#",
+            "description": "Christy and Adam's wedding",
+            "directory": "christyadam"
+        },
+        {
+            "title": "Austin and Rosey",
+            "type": "friends",
+            "image": "#",
+            "description": "Buddies Austin and Rosey",
+            "directory": "austinrosey"
+        },
+        {
+            "title": "Kess and Vinny",
+            "type": "wedding",
+            "image": "sm-kessvinny-1.webp",
+            "description": "Kesseli and Vinny's wedding",
+            "directory": "kessvinny"
+        },
+        {
+            "title": "Sienna and Adam",
+            "type": "family",
+            "image": "sm-siennaadam-01.webp",
+            "description": "Family pictures with Sienna and Adam",
+            "directory": "siennaadam"
+        },
+        {
+            "title": "Wesley and Hailey",
+            "type": "portrait",
+            "image": "sm-wesleyhailey-1.webp",
+            "description": "Wesley and Hailey's portraits",
+            "directory": "wesleyhailey"
+        },
+        {
+            "title": "Christy and Adam",
+            "type": "wedding",
+            "image": "#",
+            "description": "Christy and Adam's wedding",
+            "directory": "christyadam"
+        },
+        {
+            "title": "Austin and Rosey",
+            "type": "friends",
+            "image": "#",
+            "description": "Buddies Austin and Rosey",
+            "directory": "austinrosey"
+        },
+        {
+            "title": "Kess and Vinny",
+            "type": "wedding",
+            "image": "sm-kessvinny-2.webp",
+            "description": "Kesseli and Vinny's wedding",
+            "directory": "kessvinny"
+        },
+        {
+            "title": "Sienna and Adam",
+            "type": "family",
+            "image": "sm-siennaadam-02.webp",
+            "description": "Family pictures with Sienna and Adam",
+            "directory": "siennaadam"
+        },
+        {
+            "title": "Wesley and Hailey",
+            "type": "portrait",
+            "image": "sm-wesleyhailey-2.webp",
+            "description": "Wesley and Hailey's portraits",
+            "directory": "wesleyhailey"
+        },
+        {
+            "title": "Christy and Adam",
+            "type": "wedding",
+            "image": "#",
+            "description": "Christy and Adam's wedding",
+            "directory": "christyadam"
+        },
+        {
+            "title": "Austin and Rosey",
+            "type": "friends",
+            "image": "#",
+            "description": "Buddies Austin and Rosey",
+            "directory": "austinrosey"
+        },
+        {
+            "title": "Kess and Vinny",
+            "type": "wedding",
+            "image": "sm-kessvinny-3.webp",
+            "description": "Kesseli and Vinny's wedding",
+            "directory": "kessvinny"
+        },
+        {
+            "title": "Sienna and Adam",
+            "type": "family",
+            "image": "sm-siennaadam-03.webp",
+            "description": "Family pictures with Sienna and Adam",
+            "directory": "siennaadam"
+        },
+        {
+            "title": "Wesley and Hailey",
+            "type": "portrait",
+            "image": "sm-wesleyhailey-3.webp",
+            "description": "Wesley and Hailey's portraits",
+            "directory": "wesleyhailey"
+        },
+        {
+            "title": "Christy and Adam",
+            "type": "wedding",
+            "image": "#",
+            "description": "Christy and Adam's wedding",
+            "directory": "christyadam"
+        },
+        {
+            "title": "Austin and Rosey",
+            "type": "friends",
+            "image": "#",
+            "description": "Buddies Austin and Rosey",
+            "directory": "austinrosey"
+        },
+        {
+            "title": "Kess and Vinny",
+            "type": "wedding",
+            "image": "sm-kessvinny-1.webp",
+            "description": "Kesseli and Vinny's wedding",
+            "directory": "kessvinny"
+        },
+        {
+            "title": "Sienna and Adam",
+            "type": "family",
+            "image": "sm-siennaadam-01.webp",
+            "description": "Family pictures with Sienna and Adam",
+            "directory": "siennaadam"
+        },
+        {
+            "title": "Wesley and Hailey",
+            "type": "portrait",
+            "image": "sm-wesleyhailey-1.webp",
+            "description": "Wesley and Hailey's portraits",
+            "directory": "wesleyhailey"
+        },
+        {
+            "title": "Christy and Adam",
+            "type": "wedding",
+            "image": "#",
+            "description": "Christy and Adam's wedding",
+            "directory": "christyadam"
+        },
+        {
+            "title": "Austin and Rosey",
+            "type": "friends",
+            "image": "#",
+            "description": "Buddies Austin and Rosey",
+            "directory": "austinrosey"
+        },
+        {
+            "title": "Kess and Vinny",
+            "type": "wedding",
+            "image": "sm-kessvinny-2.webp",
+            "description": "Kesseli and Vinny's wedding",
+            "directory": "kessvinny"
+        },
+        {
+            "title": "Sienna and Adam",
+            "type": "family",
+            "image": "sm-siennaadam-02.webp",
+            "description": "Family pictures with Sienna and Adam",
+            "directory": "siennaadam"
+        },
+        {
+            "title": "Wesley and Hailey",
+            "type": "portrait",
+            "image": "sm-wesleyhailey-2.webp",
+            "description": "Wesley and Hailey's portraits",
+            "directory": "wesleyhailey"
+        },
+        {
+            "title": "Christy and Adam",
+            "type": "wedding",
+            "image": "#",
+            "description": "Christy and Adam's wedding",
+            "directory": "christyadam"
+        },
+        {
+            "title": "Austin and Rosey",
+            "type": "friends",
+            "image": "#",
+            "description": "Buddies Austin and Rosey",
+            "directory": "austinrosey"
+        },
+        {
+            "title": "Kess and Vinny",
+            "type": "wedding",
+            "image": "sm-kessvinny-3.webp",
+            "description": "Kesseli and Vinny's wedding",
+            "directory": "kessvinny"
+        },
+        {
+            "title": "Sienna and Adam",
+            "type": "family",
+            "image": "sm-siennaadam-03.webp",
+            "description": "Family pictures with Sienna and Adam",
+            "directory": "siennaadam"
+        },
+        {
+            "title": "Wesley and Hailey",
+            "type": "portrait",
+            "image": "sm-wesleyhailey-3.webp",
+            "description": "Wesley and Hailey's portraits",
+            "directory": "wesleyhailey"
+        },
+        {
+            "title": "Christy and Adam",
+            "type": "wedding",
+            "image": "#",
+            "description": "Christy and Adam's wedding",
+            "directory": "christyadam"
         }
     ]
 }

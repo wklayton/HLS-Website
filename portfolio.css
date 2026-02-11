@@ -123,3 +123,9 @@ h2 {
         font-size: max(1.5em, 2vw);
     }
 }
+
+#load-more-btn {
+    margin: 1rem auto;
+    background-color: var(--gold);
+    color: var(--black);
+}
