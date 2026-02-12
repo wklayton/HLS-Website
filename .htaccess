@@ -1,0 +1,31 @@
+<IfModule mod_expires.c>
+  ExpiresActive on
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType text/html "access plus 1 month"
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresDefault "access plus 1 month"
+</IfModule>
+
+RewriteEngine On
+
+#redirect /file.php to /file
+RewriteCond %{THE_REQUEST} \s/([^.]+)\.php [NC]
+RewriteRule ^ /%1 [NE,L,R]
+
+# now we will internally map /file to /file.php
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)/?$ /$1.php  [L]
+
+
+#redirect /file.html to /file
+ RewriteCond %{THE_REQUEST} \s/([^.]+)\.html [NC]
+ RewriteRule ^ /%1 [NE,L,R]
+
+ # now we will internally map /file to/ file.html
+ RewriteCond %{REQUEST_FILENAME}.html -f
+ RewriteRule ^(.*)/?$ /$1.html  [L]
+
+ ErrorDocument 404 /404.php

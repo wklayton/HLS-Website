@@ -8,11 +8,11 @@
         <link rel="icon" type="image/x-icon" href="favicon.ico">
         <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
         <link rel="preload" href="images/sampleWelcomeIMG.webp" as="image" fetchpriority="high">
-        <link rel="preload" href="styles.css" as="style">
+        <link rel="preload" href="globals.css" as="style">
         <link rel="preload" href="index.css" as="style">
-        <link rel="preload" href="main.js" as="script">
+        <link rel="preload" href="globals.js" as="script">
         <link rel="preload" href="index.js" as="script">
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="globals.css">
         <link rel="stylesheet" href="index.css">
 
         <!-- Get Theme Preference -->
@@ -32,6 +32,8 @@
                 --gray: oklch(57% 1% 250);
                 --red:oklch(38% 23% 21.5);
                 --pink: oklch(51% 29% 21.5);
+
+                --trans-dark-black: oklch(10% 1.5% 286 / 0.75);
 
 
                 color-scheme: dark light;
@@ -144,8 +146,8 @@
                     </div>
                     
                     <ul class="nav-menu">
-                        <li><a class="nav-item" href="portfolio.html">Portfolio</a></li>
-                        <li><a class="nav-item" href="#">Contact Us</a></li>
+                        <li><a class="nav-item" href="portfolio/">Portfolio</a></li>
+                        <li><a class="nav-item" href="#contact">Contact Us</a></li>
                         <li>
                             <label for="theme-picker">
                                 <span class="theme-checkbox-wrapper">
@@ -175,7 +177,7 @@
                     <div id="portfolio-wrapper">
                         <!-- PLACEHOLDER -->
                         <div class="portfolio-card">
-                            <a class="portfolio-directory" href="portfolio.html">
+                            <a class="portfolio-directory" href="portfolio/">
                                 <img class="portfolio-image" src="#" alt="portfolio-description" width="0" height="0">
                                 <div class="portfolio-content">
                                     <h3 class="portfolio-title">portfolio 1</h3>
@@ -184,7 +186,7 @@
                         </div>
                         <!-- PLACEHOLDER -->
                         <div class="portfolio-card">
-                            <a class="portfolio-directory" href="portfolio.html">
+                            <a class="portfolio-directory" href="portfolio/">
                                 <img class="portfolio-image" src="#" alt="portfolio-description" width="0" height="0">
                                 <div class="portfolio-content">
                                     <h3 class="portfolio-title">portfolio 2</h3>
@@ -193,7 +195,7 @@
                         </div>
                         <!-- PLACEHOLDER -->
                         <div class="portfolio-card">
-                            <a class="portfolio-directory" href="portfolio.html">
+                            <a class="portfolio-directory" href="portfolio/">
                                 <img class="portfolio-image" src="#" alt="portfolio-description" width="0" height="0">
                                 <div class="portfolio-content">
                                     <h3 class="portfolio-title">portfolio 3</h3>
@@ -201,7 +203,7 @@
                             </a>
                         </div>
                     </div>
-                    <a class="view-more custom-btn" aria-label="See more of our portfolio" href="portfolio.html">View More</a>
+                    <a class="view-more custom-btn" aria-label="See more of our portfolio" href="portfolio/">View More</a>
                 </div>
             </section>
             <section id="testimonials">
@@ -272,8 +274,8 @@
             </section>
             <p class="copyright">Copyright &copy; Hailey Layton Studios 2026</p>
         </footer>
-        <script src="index.js"></script>
-        <script defer src="main.js"></script>
+        <script src="globals.js"></script>
+        <script defer src="index.js"></script>
     </body>
 </html>
 

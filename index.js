@@ -1,6 +1,6 @@
 async function loadLatestPortfolio() {
   try {
-    const response = await fetch('portfolio/gallery.json');
+    const response = await fetch('portfolio/gallery-list.json');
     const gallery = await response.json();
     
     const container = document.getElementById('portfolio-wrapper');
