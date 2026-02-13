@@ -57,7 +57,7 @@ h2 {
     height: 100%;
     left: 0;
     top: 0;
-    background-image: url(images/onerror.webp);
+    background-image: url(../images/onerror.webp);
     object-fit: cover;
     background-position: center;
     display: block;

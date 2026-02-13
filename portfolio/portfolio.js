@@ -13,7 +13,7 @@ container.innerHTML = '';
 
 async function initPortfolio() {
   try {
-    const response = await fetch('gallery.json');
+    const response = await fetch('gallery-list.json');
     const data = await response.json();
     allGalleries = data.portfolios;
 
@@ -34,7 +34,7 @@ function renderNextBatch() {
     const imageBase = gallery.image.replace('sm-', '');
 
     const card = `
-      <a class="gallery-card" href="gallery.php?album=${gallery.directory}#">
+      <a class="gallery-card" href="gallery.php?album=${gallery.directory}">
           <img id="gallery-image-${globalIndex}" class="gallery-image" 
             src="galleries/${gallery.directory}/${gallery.image}" 
             alt="${gallery.description}"

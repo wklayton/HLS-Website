@@ -592,3 +592,19 @@ footer *::selection {
 
 
 
+
+
+
+/* 404 Styles */
+
+.error-code {
+    font-size: 8rem;
+    font-weight: 700;
+    width: fit-content;
+    margin: 1rem auto;
+    color: var(--gold);
+}
+
+
+
+

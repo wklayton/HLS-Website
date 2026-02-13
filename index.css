@@ -168,9 +168,6 @@
     justify-content: space-between;
 }
 
-.package-card {
-}
-
 .package-card h3 {
     color: light-dark(var(--dark-gold), var(--light-gold));
 }
