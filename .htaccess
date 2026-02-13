@@ -9,6 +9,15 @@
   ExpiresDefault "access plus 1 month"
 </IfModule>
 
+<IfModule mod_headers.c>
+    <Files "gallery-list.json">
+        Header unset Cache-Control
+        Header set Cache-Control "no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0"
+        Header set Pragma "no-cache"
+        Header set Expires "0"
+    </Files>
+</IfModule>
+
 RewriteEngine On
 
 #redirect /file.php to /file
